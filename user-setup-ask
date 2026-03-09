@@ -19,8 +19,6 @@ STATE=0
 while :; do
 	case "$STATE" in
 	    0)
-		# Ask how the password files should be set up.
-		db_input low passwd/shadow || true
 		# Ask if root should be allowed to login.
 		db_input medium passwd/root-login || true
 		;;
@@ -91,6 +89,18 @@ while :; do
 		db_get passwd/make-user
 		if [ "$RET" = true ] && ! is_system_user; then
 			db_input critical passwd/user-fullname || true
+			# Sanitize full name:
+			# - replace colon, comma, equal sign, ampersand
+			#   and control characters with spaces
+			#   (busybox-udeb tr does not support [:cntrl:] classes)
+			# - squeeze repeated spaces
+			# - remove leading and trailing spaces
+			db_get passwd/user-fullname
+			fullname=$(printf '%s' "$RET" | LC_ALL=C tr -s ':,=&\x00-\x1f\x7f' ' ' | \
+				sed -e 's/^ *//' -e 's/ *$//')
+			if [ "$fullname" != "$RET" ]; then
+				db_set passwd/user-fullname "$fullname"
+			fi
 		fi
 		;;
 	    5)

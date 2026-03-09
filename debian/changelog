@@ -1,3 +1,291 @@
+user-setup (1.107) unstable; urgency=medium
+
+  [ Updated translations ]
+  * Spanish (es.po) by Santiago Vila
+
+ -- Cyril Brulebois <kibi@debian.org>  Sun, 20 Jul 2025 06:34:44 +0200
+
+user-setup (1.106) unstable; urgency=medium
+
+  [ Updated translations ]
+  * Greek (el.po) by galaxico
+  * Hungarian (hu.po) by Szia Tomi
+  * Kabyle (kab.po) by ButterflyOfFire
+  * Uyghur (ug.po) by Abduqadir Abliz
+
+ -- Cyril Brulebois <kibi@debian.org>  Sun, 29 Jun 2025 14:40:08 +0200
+
+user-setup (1.105) unstable; urgency=medium
+
+  [ Pascal Hambourg ]
+  * Replace --gecos with --comment in adduser invocation, as suggested by
+    the documentation (deprecation notice).
+  * Set the full name with chfn instead of adduser:
+     - adduser 3.152 relaxes checks on what's getting passed via --comment
+       (see #1101678).
+     - To be safe, with an older adduser or with further versions that
+       would refine the checks, pass the username through --comment as
+       a first step, then use chfn to try and set the fullname.
+     - This should ensure that d-i can create users (instead of silently
+       failing, see #1101069, #1101196, and #1104550). If chfn fails for
+       some reason, d-i continues, and the username stays in the comment
+       field instead of the specified fullname.
+  * Stop setting LANG=C:
+     - C.UTF-8 is used in d-i, is available in the installed system, so
+       using C instead doesn't seem needed.
+     - Worse, it can be counterproductive and trigger an indefinite hang
+       in some conditions (see #1104726).
+  * Sanitize fullname, which should ensure chfn can be used to perform the
+    username/fullname substitution mentioned above:
+     - Replace colon, comma, equal sign, ampersand, and control characters
+       with spaces.
+     - Squeeze repeated spaces.
+     - Remove leading and trailing spaces.
+
+ -- Cyril Brulebois <kibi@debian.org>  Wed, 14 May 2025 14:34:16 +0200
+
+user-setup (1.104) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Galician (gl.po) by Parodper
+  * Croatian (hr.po) by Valentin Vidic
+  * Hungarian (hu.po) by Szia Tomi
+  * Italian (it.po) by Milo Casagrande
+  * Lithuanian (lt.po) by Rimas Kudelis
+  * Marathi (mr.po) by Kalyani Kenekar
+  * Serbian (sr.po) by Мирослав Николић
+  * Vietnamese (vi.po) by Dagon Vn
+
+ -- Holger Wansing <hwansing@mailbox.org>  Wed, 02 Apr 2025 23:17:03 +0200
+
+user-setup (1.103) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Czech (cs.po) by Miroslav Kure
+  * Finnish (fi.po) by Ricky Tigg
+  * Hungarian (hu.po) by Szia Tomi
+  * Italian (it.po) by Milo Casagrande
+  * Polish (pl.po) by Matthaiks
+
+ -- Holger Wansing <hwansing@mailbox.org>  Thu, 06 Feb 2025 21:35:48 +0100
+
+user-setup (1.102) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Belarusian (be.po) by vics
+  * Persian (fa.po) by Danial Behzadi
+  * Finnish (fi.po) by Jiri Grönroos
+  * Icelandic (is.po) by Sveinn í Felli
+  * Italian (it.po) by Giuseppe Sacco
+  * Korean (ko.po) by Changwoo Ryu
+  * Romanian (ro.po) by Remus-Gabriel Chelu
+  * Tamil (ta.po) by தமிழ்நேரம்
+
+ -- Holger Wansing <hwansing@mailbox.org>  Fri, 10 Jan 2025 23:43:33 +0100
+
+user-setup (1.101) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Belarusian (be.po) by Joe
+  * Estonian (et.po) by Kristjan Räts
+  * Persian (fa.po) by peylight
+  * French (fr.po) by Baptiste Jammet
+  * Galician (gl.po) by Víctor Posada
+  * Icelandic (is.po) by Sveinn í Felli
+  * Japanese (ja.po) by Sadaharu Wakisaka
+  * Occitan (oc.po) by Quentin PAGÈS
+  * Punjabi (Gurmukhi) (pa.po) by Aman Alam
+  * Russian (ru.po) by Yuri Kozlov
+  * Simplified Chinese (zh_CN.po) by Lou Letian
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sat, 30 Nov 2024 09:46:51 +0100
+
+user-setup (1.100) unstable; urgency=medium
+
+  [ Updated translations ]
+  * Indonesian (id.po) by Andika Triwidada
+  * Georgian (ka.po) by Temuri Doghonadze
+  * Latvian (lv.po) by GGLVXD
+
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 02 Nov 2024 22:16:35 +0100
+
+user-setup (1.99) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Belarusian (be.po) by Joe
+  * German (de.po) by Holger Wansing
+  * Greek (el.po) by mpt.c
+  * Hungarian (hu.po) by Szia Tomi
+  * Indonesian (id.po) by Andika Triwidada
+  * Georgian (ka.po) by Temuri Doghonadze
+  * Norwegian Bokmal (nb.po) by Petter Reinholdtsen
+  * Portuguese (Brazil) (pt_BR.po) by Adriano Rafael Gomes
+  * Turkish (tr.po) by Fatih Altun
+  * Simplified Chinese (zh_CN.po) by Zi Jiaxu
+
+ -- Holger Wansing <hwansing@mailbox.org>  Tue, 10 Sep 2024 22:09:10 +0200
+
+user-setup (1.98) unstable; urgency=medium
+
+  * Team upload
+
+  * Change entry for 1.97: add forgotten bug closure.
+
+  [ Updated translations ]
+  * Hebrew (he.po) by Yaron Shahrabani
+  * Japanese (ja.po) by Norimitsu SUGIMOTO
+  * Punjabi (Gurmukhi) (pa.po) by Aman Alam
+  * Ukrainian (uk.po) by Hotripak
+  * Traditional Chinese (zh_TW.po) by yubike
+
+ -- Holger Wansing <hwansing@mailbox.org>  Tue, 28 May 2024 20:41:58 +0200
+
+user-setup (1.97) unstable; urgency=medium
+
+  * Team upload
+
+  [ Philip Hands ]
+  * Change template: update password selection advice, to get rid of outdated
+    advice about password selection and renewals, and ensure that people know
+    what to expect if they leave the root password blank. Closes: #1064617,
+    #998408, #868869.
+
+  [ Updated translations ]
+  * Arabic (ar.po) by Der Marschall
+  * Belarusian (be.po) by Viktar Siarheichyk
+  * Catalan (ca.po) by d
+  * Esperanto (eo.po) by phlostically
+  * Spanish (es.po) by gallegonovato
+  * Estonian (et.po) by Kristjan Räts
+  * Galician (gl.po) by gallegonovato
+  * Hebrew (he.po) by Yaron Shahrabani
+  * Hindi (hi.po) by Scrambled777
+  * Hungarian (hu.po) by SZERVÁC Attila
+  * Indonesian (id.po) by Andika Triwidada
+  * Japanese (ja.po) by Kenshi Muto
+  * Kabyle (kab.po) by ButterflyOfFire
+  * Macedonian (mk.po) by Kristijan Fremen Velkovski
+  * Malayalam (ml.po) by Manoj Karingamadathil
+  * Norwegian Bokmal (nb.po) by Petter Reinholdtsen
+  * Dutch (nl.po) by Frans Spiesschaert
+  * Norwegian Nynorsk (nn.po) by Ola Haugen Havrevoll
+  * Occitan (oc.po) by Quentin PAGÈS
+  * Polish (pl.po) by Matthaiks
+  * Portuguese (pt.po) by Miguel Figueiredo
+  * Romanian (ro.po) by ThinkRoot
+  * Swedish (sv.po) by bittin1ddc447d824349b2
+  * Turkish (tr.po) by Oğuz Ersen
+  * Ukrainian (uk.po) by Сергій
+
+ -- Holger Wansing <hwansing@mailbox.org>  Fri, 03 May 2024 21:14:17 +0200
+
+user-setup (1.96) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Punjabi (Gurmukhi) (pa.po) by Aman Alam
+  * Romanian (ro.po) by NicolaeFericitu
+  * Serbian (sr.po) by Filipovic Dragan
+
+ -- Holger Wansing <hwansing@mailbox.org>  Thu, 04 Jan 2024 21:18:31 +0100
+
+user-setup (1.95) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Irish (ga.po) by Kevin Scannell
+  * Norwegian Nynorsk (nn.po) by Yngve Spjeld-Landro
+
+ -- Holger Wansing <hwansing@mailbox.org>  Tue, 23 May 2023 19:07:38 +0200
+
+user-setup (1.94) unstable; urgency=medium
+
+  [ Updated translations ]
+  * Georgian (ka.po) by Temuri Doghonadze
+  * Polish (pl.po) by Matthaiks
+
+ -- Cyril Brulebois <kibi@debian.org>  Wed, 26 Apr 2023 02:15:52 +0200
+
+user-setup (1.93) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Refresh all translation files due to template changes in 1.92.
+
+ -- Holger Wansing <hwansing@mailbox.org>  Mon, 13 Mar 2023 12:09:43 +0100
+
+user-setup (1.92) unstable; urgency=medium
+
+  * Team upload
+
+  [ Nick Black ]
+  * Remove support for unshadowed passwords
+
+ -- Steve McIntyre <93sam@debian.org>  Sun, 15 Jan 2023 13:29:49 +0000
+
+user-setup (1.91) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Build-Depends: Drop versioned constraint on dpkg-dev and po-debconf.
+  * user-setup-udeb: Drop versioned constraint on cdebconf-udeb in Depends.
+
+  [ Samuel Thibault ]
+  * Make gbp tag produce the right tag format
+
+  [ Colin Watson ]
+  * Fix disabling of piuparts in CI
+
+  [ Updated translations ]
+  * Amharic (am.po) by Danial Behzadi
+  * Asturian (ast.po) by Danial Behzadi
+  * Russian (ru.po) by Lev Lamberov
+
+ -- Holger Wansing <hwansing@mailbox.org>  Tue, 03 Jan 2023 21:34:09 +0100
+
+user-setup (1.90) unstable; urgency=medium
+
+  * Team upload
+
+  * Adapt lintian-overrides to recent 'pointed hints' changings.
+
+  [ Updated translations ]
+  * Basque (eu.po) by Gontzal Manuel Pujana Onaindia
+  * Vietnamese (vi.po) by Trần Ngọc Quân
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sun, 31 Jul 2022 15:47:00 +0200
+
+user-setup (1.89) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Danish (da.po) by Joe Hansen
+  * Norwegian Nynorsk (nn.po) by aujawindar
+  * Simplified Chinese (zh_CN.po) by Wenbin Lv
+
+  [ Debian Janitor ]
+  * Add missing ${misc:Depends} to Depends for user-setup-udeb.
+  * Bump debhelper from deprecated 9 to 13.
+  * Set debhelper-compat version in Build-Depends.
+  * Update renamed lintian tag names in lintian overrides.
+
+ -- Holger Wansing <hwansing@mailbox.org>  Thu, 26 May 2022 23:50:50 +0200
+
 user-setup (1.88) unstable; urgency=medium
 
   * Team upload

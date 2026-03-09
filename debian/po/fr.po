@@ -24,13 +24,14 @@
 #   Grégoire Colbert <gregus@linux-mandrake.com>, 2001.
 #   Tobias Quathamer <toddy@debian.org>, 2007, 2008.
 # Alban Vidal <alban.vidal@zordhak.fr>, 2018.
-# Baptiste Jammet <baptiste@mailoo.org>, 2019, 2020.
+# Baptiste Jammet <baptiste@mailoo.org>, 2019, 2020, 2022, 2023, 2024.
+# bubu <bubub@no-log.org>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: user-setup@packages.debian.org\n"
-"POT-Creation-Date: 2012-02-16 22:49+0000\n"
-"PO-Revision-Date: 2020-08-17 10:18+0100\n"
+"POT-Creation-Date: 2024-04-06 20:02+0000\n"
+"PO-Revision-Date: 2024-11-05 22:31+0100\n"
 "Last-Translator: Baptiste Jammet <baptiste@mailoo.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "Language: fr\n"
@@ -70,52 +71,49 @@ msgstr "Mot de passe du superutilisateur (« root ») :"
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"You need to set a password for 'root', the system administrative account. A "
-"malicious or unqualified user with root access can have disastrous results, "
-"so you should take care to choose a root password that is not easy to guess. "
-"It should not be a word found in dictionaries, or a word that could be "
-"easily associated with you."
+"Some account needs to be available with administrative super-user "
+"privileges. The password for that account should be something that cannot be "
+"guessed."
 msgstr ""
-"Vous devez choisir un mot de passe pour le superutilisateur, le compte "
-"d'administration du système. Un utilisateur malintentionné ou peu "
-"expérimenté qui aurait accès à ce compte peut provoquer des désastres. En "
-"conséquence, ce mot de passe ne doit pas être facile à deviner, ni "
-"correspondre à un mot d'un dictionnaire ou vous être facilement associé."
-
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#: ../user-setup-udeb.templates:6001 ../user-setup-udeb.templates:13001
-msgid ""
-"A good password will contain a mixture of letters, numbers and punctuation "
-"and should be changed at regular intervals."
-msgstr ""
-"Un bon mot de passe est composé de lettres, chiffres et signes de "
-"ponctuation. Il devra en outre être changé régulièrement."
+"Un compte doit être paramétré pour disposer des privilèges administratifs de "
+"superutilisateur. Le mot de passe pour ce compte doit être quelque chose qui "
+"ne peut pas être deviné."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"The root user should not have an empty password. If you leave this empty, "
-"the root account will be disabled and the system's initial user account will "
-"be given the power to become root using the \"sudo\" command."
+"To allow direct password-based access via the 'root' account, you can set "
+"the password for that account here."
 msgstr ""
-"Le superutilisateur (« root ») ne doit pas avoir de mot de passe vide. Si "
-"vous laissez ce champ vide, le compte du superutilisateur sera désactivé et "
-"le premier compte qui sera créé aura la possibilité d'obtenir les privilèges "
-"du superutilisateur avec la commande « sudo »."
+"Pour autoriser une connexion directe du superutilisateur (« root ») par mot "
+"de passe, saisissez ici son mot de passe."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
-msgid "Note that you will not be able to see the password as you type it."
-msgstr "Par sécurité, rien n'est affiché pendant la saisie."
+msgid ""
+"Alternatively, you can lock the root account's password by leaving this "
+"setting empty, and instead use the system's initial user account (which will "
+"be set up in the next step) to gain administrative privileges. This will be "
+"enabled for you by adding that initial user to the 'sudo' group."
+msgstr ""
+"Autrement, vous pouvez bloquer le mot de passe du superutilisateur en "
+"laissant ce champ vide. À la place, vous pourrez utiliser le premier "
+"utilisateur créé par le système (à la prochaine étape) pour obtenir des "
+"privilèges d'administration. Cela sera effectué en ajoutant le premier "
+"utilisateur créé au groupe « sudo »."
+
+#. Type: password
+#. Description
+#. :sl1:
+#: ../user-setup-udeb.templates:6001
+msgid "Note: what you type here will be hidden (unless you select to show it)."
+msgstr ""
+"Remarque : ce que vous saisirez ici sera caché (à moins de choisir de "
+"l'afficher)."
 
 #. Type: password
 #. Description
@@ -167,7 +165,7 @@ msgstr ""
 #: ../user-setup-udeb.templates:8001
 msgid ""
 "Note that you may create it later (as well as any additional account) by "
-"typing 'adduser <username>' as root, where <username> is an username, like "
+"typing 'adduser <username>' as root, where <username> is a username, like "
 "'imurdock' or 'rms'."
 msgstr ""
 "Veuillez noter que vous pourrez le créer plus tard (de même que tout autre "
@@ -279,6 +277,15 @@ msgstr "Mot de passe pour le nouvel utilisateur :"
 #. Type: password
 #. Description
 #. :sl1:
+#: ../user-setup-udeb.templates:13001
+msgid "Make sure to select a strong password that cannot be guessed."
+msgstr ""
+"Assurez-vous de choisir un mot de passe suffisamment robuste pour qu'il ne "
+"puisse pas être deviné."
+
+#. Type: password
+#. Description
+#. :sl1:
 #: ../user-setup-udeb.templates:14001
 msgid ""
 "Please enter the same user password again to verify you have typed it "
@@ -321,33 +328,10 @@ msgstr ""
 "Vous avez choisi un mot de passe vide, ce qui n'est pas autorisé. Veuillez "
 "choisir un mot de passe non vide."
 
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid "Enable shadow passwords?"
-msgstr "Faut-il activer les mots de passe cachés (« shadow passwords ») ?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid ""
-"Shadow passwords make your system more secure because nobody is able to view "
-"even encrypted passwords. The passwords are stored in a separate file that "
-"can only be read by special programs. The use of shadow passwords is "
-"strongly recommended, except in a few cases such as NIS environments."
-msgstr ""
-"Les mots de passe cachés rendent le système plus sûr car personne n'aura "
-"accès aux mots de passe chiffrés. Les mots de passe seront conservés dans un "
-"fichier à part et ne pourront être lus que par des programmes spéciaux. "
-"L'utilisation des mots de passe cachés est fortement recommandée sauf dans "
-"de rares cas comme lors de l'utilisation de NIS."
-
 #. Type: title
 #. Description
 #. :sl1:
-#: ../user-setup-udeb.templates:18001
+#: ../user-setup-udeb.templates:17001
 msgid "Set up users and passwords"
 msgstr "Créer les utilisateurs et choisir les mots de passe"
 
@@ -355,6 +339,6 @@ msgstr "Créer les utilisateurs et choisir les mots de passe"
 #. Description
 #. finish-install progress bar item
 #. :sl1:
-#: ../user-setup-udeb.templates:19001
+#: ../user-setup-udeb.templates:18001
 msgid "Setting users and passwords..."
 msgstr "Création des utilisateurs et mise en place des mots de passe..."

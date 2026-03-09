@@ -4,9 +4,9 @@
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
 # Thai translation of debian-installer.
-# Copyright (C) 2006-2015 Software in the Public Interest, Inc.
+# Copyright (C) 2006-2021 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
-# Theppitak Karoonboonyanan <theppitak@gmail.com>, 2006-2015.
+# Theppitak Karoonboonyanan <theppitak@gmail.com>, 2006-2021.
 #
 #
 # Translations from iso-codes:
@@ -16,14 +16,14 @@
 #   Alastair McKinstry <mckinstry@computer.org>, 2002, 2004
 # Translations from KDE:
 #   Thanomsub Noppaburana <donga@midaassets.com>
-# Theppitak Karoonboonyanan <theppitak@gmail.com>, 2005-2015
+# Theppitak Karoonboonyanan <theppitak@gmail.com>, 2005-2017
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: user-setup@packages.debian.org\n"
-"POT-Creation-Date: 2012-02-16 22:49+0000\n"
-"PO-Revision-Date: 2015-09-30 14:14+0700\n"
+"POT-Creation-Date: 2024-04-06 20:02+0000\n"
+"PO-Revision-Date: 2021-02-03 16:48+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <theppitak@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "Language: th\n"
@@ -61,48 +61,37 @@ msgstr "รหัสผ่าน root:"
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"You need to set a password for 'root', the system administrative account. A "
-"malicious or unqualified user with root access can have disastrous results, "
-"so you should take care to choose a root password that is not easy to guess. "
-"It should not be a word found in dictionaries, or a word that could be "
-"easily associated with you."
+"Some account needs to be available with administrative super-user "
+"privileges. The password for that account should be something that cannot be "
+"guessed."
 msgstr ""
-"คุณต้องตั้งรหัสผ่านสำหรับ 'root' ซึ่งเป็นบัญชีผู้ดูแลระบบ ผู้ใช้ที่ไม่หวังดี "
-"หรือไม่มีความรู้ในการดูแลระบบ หากมีสิทธิ์ของ root จะสามารถทำความเสียหายใหญ่หลวงได้ ดังนั้น "
-"คุณควรระวังในการตั้งรหัสผ่าน ไม่ให้สามารถเดาได้ง่ายเกินไป ไม่ควรจะเป็นคำที่พบในพจนานุกรม "
-"หรือคำที่เกี่ยวโยงกับตัวคุณได้อย่างง่ายดาย"
-
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#: ../user-setup-udeb.templates:6001 ../user-setup-udeb.templates:13001
-msgid ""
-"A good password will contain a mixture of letters, numbers and punctuation "
-"and should be changed at regular intervals."
-msgstr ""
-"รหัสผ่านที่ดีควรมีตัวอักษร ตัวเลข และเครื่องหมายวรรคตอนผสมกัน และคุณควรเปลี่ยนรหัสผ่านเป็นประจำ"
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"The root user should not have an empty password. If you leave this empty, "
-"the root account will be disabled and the system's initial user account will "
-"be given the power to become root using the \"sudo\" command."
+"To allow direct password-based access via the 'root' account, you can set "
+"the password for that account here."
 msgstr ""
-"ผู้ใช้ root ไม่ควรมีรหัสผ่านว่างเปล่า ถ้าคุณปล่อยค่านี้ให้ว่างเปล่า บัญชีผู้ใช้ root จะถูกระงับไม่ให้ใช้ "
-"และบัญชีผู้ใช้คนแรกของระบบจะได้รับสิทธิ์ให้เป็น root ได้โดยใช้คำสั่ง \"sudo\""
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
-msgid "Note that you will not be able to see the password as you type it."
-msgstr "ในการนี้ คุณจะไม่เห็นรหัสผ่านขณะพิมพ์"
+msgid ""
+"Alternatively, you can lock the root account's password by leaving this "
+"setting empty, and instead use the system's initial user account (which will "
+"be set up in the next step) to gain administrative privileges. This will be "
+"enabled for you by adding that initial user to the 'sudo' group."
+msgstr ""
+
+#. Type: password
+#. Description
+#. :sl1:
+#: ../user-setup-udeb.templates:6001
+msgid "Note: what you type here will be hidden (unless you select to show it)."
+msgstr ""
 
 #. Type: password
 #. Description
@@ -148,9 +137,10 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../user-setup-udeb.templates:8001
+#, fuzzy
 msgid ""
 "Note that you may create it later (as well as any additional account) by "
-"typing 'adduser <username>' as root, where <username> is an username, like "
+"typing 'adduser <username>' as root, where <username> is a username, like "
 "'imurdock' or 'rms'."
 msgstr ""
 "สังเกตว่า คุณสามารถสร้างบัญชีดังกล่าวภายหลังได้ (รวมถึงบัญชีเพิ่มเติมอื่นๆ) โดยพิมพ์คำสั่ง "
@@ -250,6 +240,13 @@ msgstr "ตั้งรหัสผ่านสำหรับผู้ใช้
 #. Type: password
 #. Description
 #. :sl1:
+#: ../user-setup-udeb.templates:13001
+msgid "Make sure to select a strong password that cannot be guessed."
+msgstr ""
+
+#. Type: password
+#. Description
+#. :sl1:
 #: ../user-setup-udeb.templates:14001
 msgid ""
 "Please enter the same user password again to verify you have typed it "
@@ -286,32 +283,10 @@ msgid ""
 "empty password."
 msgstr "คุณป้อนรหัสผ่านว่างเปล่า ซึ่งไม่อนุญาต กรุณาตั้งรหัสผ่านที่ไม่ว่างเปล่า"
 
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid "Enable shadow passwords?"
-msgstr "เปิดใช้รหัสผ่าน shadow หรือไม่?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid ""
-"Shadow passwords make your system more secure because nobody is able to view "
-"even encrypted passwords. The passwords are stored in a separate file that "
-"can only be read by special programs. The use of shadow passwords is "
-"strongly recommended, except in a few cases such as NIS environments."
-msgstr ""
-"รหัสผ่านเงา (shadow) จะทำให้ระบบของคุณปลอดภัยยิ่งขึ้น "
-"เพราะจะไม่มีใครดูได้แม้แต่รหัสผ่านที่เข้ารหัสไว้ "
-"รหัสผ่านจะถูกเก็บไว้ในแฟ้มต่างหากที่สามารถอ่านได้โดยโปรแกรมพิเศษเท่านั้น "
-"เราขอแนะนำอย่างยิ่งให้ใช้รหัสผ่านเงานี้ ยกเว้นในบางกรณีที่พบไม่บ่อย เช่น ในสภาพแวดล้อมที่ใช้ NIS"
-
 #. Type: title
 #. Description
 #. :sl1:
-#: ../user-setup-udeb.templates:18001
+#: ../user-setup-udeb.templates:17001
 msgid "Set up users and passwords"
 msgstr "ตั้งบัญชีผู้ใช้และรหัสผ่าน"
 
@@ -319,6 +294,6 @@ msgstr "ตั้งบัญชีผู้ใช้และรหัสผ่
 #. Description
 #. finish-install progress bar item
 #. :sl1:
-#: ../user-setup-udeb.templates:19001
+#: ../user-setup-udeb.templates:18001
 msgid "Setting users and passwords..."
 msgstr "กำลังตั้งบัญชีผู้ใช้และรหัสผ่าน..."

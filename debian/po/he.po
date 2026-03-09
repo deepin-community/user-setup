@@ -21,14 +21,14 @@
 # Meni Livne <livne@kde.org>, 2000.
 # Meital Bourvine <meitalbourvine@gmail.com>, 2007.
 # Lior Kaplan <kaplan@debian.org>, 2004-2007, 2008, 2010, 2011, 2015, 2017.
-# Yaron Shahrabani <sh.yaron@gmail.com>, 2018, 2019, 2020.
+# Yaron Shahrabani <sh.yaron@gmail.com>, 2018, 2019, 2020, 2021, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: user-setup@packages.debian.org\n"
-"POT-Creation-Date: 2012-02-16 22:49+0000\n"
-"PO-Revision-Date: 2020-05-01 13:11+0000\n"
+"POT-Creation-Date: 2024-04-06 20:02+0000\n"
+"PO-Revision-Date: 2024-05-05 09:12+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew (https://www.transifex.com/yaron/teams/79473/he/)\n"
 "Language: he\n"
@@ -67,50 +67,45 @@ msgstr "ססמת root:"
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"You need to set a password for 'root', the system administrative account. A "
-"malicious or unqualified user with root access can have disastrous results, "
-"so you should take care to choose a root password that is not easy to guess. "
-"It should not be a word found in dictionaries, or a word that could be "
-"easily associated with you."
+"Some account needs to be available with administrative super-user "
+"privileges. The password for that account should be something that cannot be "
+"guessed."
 msgstr ""
-"יש להגדיר ססמה ל־‚root’, חשבון הניהול של המערכת. משתמש זדוני או ללא הכישורים "
-"המתאימים עם הרשאות root עשוי לגרום לתוצאות הרסניות, לכן, כדאי להשקיע מחשבה "
-"בבחירת ססמת ה־root שלא יהיה קל לנחש. זאת לא אמורה להיות מילה שניתן למצוא "
-"במילונים או מילה שניתן לשייך אליך בקלות."
-
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#: ../user-setup-udeb.templates:6001 ../user-setup-udeb.templates:13001
-msgid ""
-"A good password will contain a mixture of letters, numbers and punctuation "
-"and should be changed at regular intervals."
-msgstr ""
-"ססמה טובה מכילה תערובת של אותיות, ספרות וסימני פיסוק ויש לשנות אותה במרווחי "
-"זמן קבועים."
+"איזשהו חשבון חייב להיות זמין עם הרשאות משתמש על ניהוליות. הסיסמה לחשבון הזה "
+"אמורה להיות משהו שבלתי אפשרי לנחש."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"The root user should not have an empty password. If you leave this empty, "
-"the root account will be disabled and the system's initial user account will "
-"be given the power to become root using the \"sudo\" command."
+"To allow direct password-based access via the 'root' account, you can set "
+"the password for that account here."
 msgstr ""
-"הססמה של root לא אמורה להיות ריקה. השארת שדה זה ריק, תגרום להשבתת החשבון "
-"root ולחשבון המשתמש ההתחלתי של המערכת תהיה האפשרות להפוך ל־root באמצעות "
-"הפקודה „sudo”."
+"כדי לאפשר גישה ישירה לפי סיסמה דרך חשבון העל ‚root’, אפשר להגדיר את הסיסמה "
+"לחשבון הזה כאן."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
-msgid "Note that you will not be able to see the password as you type it."
-msgstr "לתשומת לבך: לא ניתן לצפות בססמה בזמן הקלדתה."
+msgid ""
+"Alternatively, you can lock the root account's password by leaving this "
+"setting empty, and instead use the system's initial user account (which will "
+"be set up in the next step) to gain administrative privileges. This will be "
+"enabled for you by adding that initial user to the 'sudo' group."
+msgstr ""
+"לחלופין, אפשר לנעול את חשבון העל בסיסמה על ידי השארת ההגדרה ריקה ובמקום "
+"להשתמש בחשבון המשתמש הראשוני של המערכת (שיוגדר בשלב הבא) כדי לקבל הרשאות "
+"ניהול. המצב הזה יופעל בשבילך על ידי הוספת המשתמש הראשוני הזה לקבוצת "
+"‚sudo’ (מורשי פקודות על)."
+
+#. Type: password
+#. Description
+#. :sl1:
+#: ../user-setup-udeb.templates:6001
+msgid "Note: what you type here will be hidden (unless you select to show it)."
+msgstr "לתשומת ליבך: מה שיוקלד כאן יוסתר (אלמלא בחרת להציג אותו)."
 
 #. Type: password
 #. Description
@@ -120,7 +115,7 @@ msgstr "לתשומת לבך: לא ניתן לצפות בססמה בזמן הקל
 #. :sl1:
 #: ../user-setup-udeb.templates:7001 ../user-setup-udeb.templates:14001
 msgid "Re-enter password to verify:"
-msgstr "נא למלא את הססמה שוב לצורך אימות:"
+msgstr "נא למלא את הסיסמה שוב לצורך אימות:"
 
 #. Type: password
 #. Description
@@ -129,7 +124,7 @@ msgstr "נא למלא את הססמה שוב לצורך אימות:"
 msgid ""
 "Please enter the same root password again to verify that you have typed it "
 "correctly."
-msgstr "נא להקליד את אותה הססמה למשתמש root שוב כדי לוודא שהוקלדה נכון."
+msgstr "נא להקליד את אותה הסיסמה למשתמש root שוב כדי לוודא שהוקלדה נכון."
 
 #. Type: boolean
 #. Description
@@ -158,7 +153,7 @@ msgstr ""
 #: ../user-setup-udeb.templates:8001
 msgid ""
 "Note that you may create it later (as well as any additional account) by "
-"typing 'adduser <username>' as root, where <username> is an username, like "
+"typing 'adduser <username>' as root, where <username> is a username, like "
 "'imurdock' or 'rms'."
 msgstr ""
 "לתשומת לבך, ניתן ליצור אותו מאוחר יותר (לרבות חשבונות נוספים) על ידי הקלדת "
@@ -258,7 +253,14 @@ msgstr ""
 #. :sl1:
 #: ../user-setup-udeb.templates:13001
 msgid "Choose a password for the new user:"
-msgstr "נא לבחור ססמה למשתמש החדש:"
+msgstr "נא לבחור סיסמה למשתמש החדש:"
+
+#. Type: password
+#. Description
+#. :sl1:
+#: ../user-setup-udeb.templates:13001
+msgid "Make sure to select a strong password that cannot be guessed."
+msgstr "כדאי לוודא שבחרת בסיסמה חדשה שאי אפשר לנחש."
 
 #. Type: password
 #. Description
@@ -274,21 +276,21 @@ msgstr "נא להזין את ססמת המשתמש פעם נוספת כדי לו
 #. :sl2:
 #: ../user-setup-udeb.templates:15001
 msgid "Password input error"
-msgstr "שגיאה בקליטת הססמה"
+msgstr "שגיאה בקליטת הסיסמה"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../user-setup-udeb.templates:15001
 msgid "The two passwords you entered were not the same. Please try again."
-msgstr "שתי הססמאות שמילאת אינן זהות. נא לנסות שוב."
+msgstr "שתי הסיסמאות שמילאת אינן זהות. נא לנסות שוב."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../user-setup-udeb.templates:16001
 msgid "Empty password"
-msgstr "ססמה ריקה"
+msgstr "סיסמה ריקה"
 
 #. Type: error
 #. Description
@@ -297,38 +299,16 @@ msgstr "ססמה ריקה"
 msgid ""
 "You entered an empty password, which is not allowed. Please choose a non-"
 "empty password."
-msgstr "מילאת ססמה ריקה, אסור לעשות זאת. נא לבחור ססמה לא ריקה."
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid "Enable shadow passwords?"
-msgstr "להפעיל הצללת ססמאות?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid ""
-"Shadow passwords make your system more secure because nobody is able to view "
-"even encrypted passwords. The passwords are stored in a separate file that "
-"can only be read by special programs. The use of shadow passwords is "
-"strongly recommended, except in a few cases such as NIS environments."
-msgstr ""
-"הצללת ססמאות משפרת את אבטחת המערכת שלך כיוון שלאף אחד לא אין אפשרות לצפות "
-"בססמאות המוצפנות. הססמאות נשמרות בקובץ נפרד שזמין לקריאה רק מצד תכניות "
-"מיוחדות. השימוש בהצללת ססמאות מומלץ בחום, למעט במספר מקרים בודדים כמו למשל "
-"בסביבות NIS."
+msgstr "מילאת סיסמה ריקה, אסור לעשות זאת. נא לבחור סיסמה לא ריקה."
 
 #  Type: text
 #  Description
 #. Type: title
 #. Description
 #. :sl1:
-#: ../user-setup-udeb.templates:18001
+#: ../user-setup-udeb.templates:17001
 msgid "Set up users and passwords"
-msgstr "הגדרת משתמשים וססמאות"
+msgstr "הגדרת משתמשים וסיסמאות"
 
 #  Type: text
 #  Description
@@ -336,6 +316,6 @@ msgstr "הגדרת משתמשים וססמאות"
 #. Description
 #. finish-install progress bar item
 #. :sl1:
-#: ../user-setup-udeb.templates:19001
+#: ../user-setup-udeb.templates:18001
 msgid "Setting users and passwords..."
-msgstr "מוגדרים משתמשים וססמאות…"
+msgstr "מוגדרים משתמשים וסיסמאות…"

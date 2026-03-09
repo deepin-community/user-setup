@@ -4,7 +4,6 @@ set -e
 . /usr/share/debconf/confmodule
 
 if [ "$1" ]; then
-	export LANG=C # avoid locale errors from perl
 	ROOT="$1"
 	chroot=chroot
 	log='log-output -t user-setup'
@@ -53,13 +52,7 @@ EOF
 	fi
 }
 
-# Enable/disable shadow passwords.
-db_get passwd/shadow
-if [ "$RET" = true ]; then
-	$log $chroot $ROOT shadowconfig on
-else
-	$log $chroot $ROOT shadowconfig off
-fi
+$log $chroot $ROOT shadowconfig on
 
 if ! root_password; then
 	# Was the root password preseeded encrypted?
@@ -121,7 +114,9 @@ if [ "$RET" = true ] && ! is_system_user; then
 	fi
 
 	if [ -x $ROOT/usr/sbin/adduser ]; then
-		$log $chroot $ROOT adduser --disabled-password --gecos "$RET" $UIDOPT "$USER" >/dev/null || true
+		$log $chroot $ROOT adduser --disabled-password --comment "$USER" $UIDOPT "$USER" >/dev/null || true
+		# Do not set the full name with adduser to work around #1101196
+		$log $chroot $ROOT chfn --full-name "$RET" "$USER" >/dev/null || true
 	else
 		$log $chroot $ROOT useradd -c "$RET" -m "$USER" $UIDOPT >/dev/null || true
 	fi

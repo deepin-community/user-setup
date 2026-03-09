@@ -19,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: user-setup@packages.debian.org\n"
-"POT-Creation-Date: 2012-02-16 22:49+0000\n"
-"PO-Revision-Date: 2020-10-10 17:26+0000\n"
-"Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
+"POT-Creation-Date: 2024-04-06 20:02+0000\n"
+"PO-Revision-Date: 2025-03-30 15:01+0000\n"
+"Last-Translator: Kalyani Kenekar <kalyaniknkr@gmail.com>\n"
 "Language-Team: CDAC_DI\n"
 "Language: mr\n"
 "MIME-Version: 1.0\n"
@@ -59,50 +59,47 @@ msgstr "मूल साठी परवलीचा शब्द:"
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"You need to set a password for 'root', the system administrative account. A "
-"malicious or unqualified user with root access can have disastrous results, "
-"so you should take care to choose a root password that is not easy to guess. "
-"It should not be a word found in dictionaries, or a word that could be "
-"easily associated with you."
+"Some account needs to be available with administrative super-user "
+"privileges. The password for that account should be something that cannot be "
+"guessed."
 msgstr ""
-"आपल्याला प्रणालीच्या प्रशासकाचे खाते 'मूल' साठी परवलीचा शब्द देणे जरूरीचे आहे. अपात्र वा "
-"अपायकारी हेतूच्या वापरदाराला मूल अधिकार मिळाल्यास त्याचे गंभीर परिणाम होउ शकतात, "
-"त्यामुळे आपण मूल करिता सहज अंदाज न येण्याजोगा परवलीचा शब्द निवडण्याची काळजी घेतली "
-"पाहिजे. शब्दकोषात आढळणारा शब्द किंवा तुमच्याशी सहज निगडीत होऊ शकणारा शब्द टाळावा."
-
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#: ../user-setup-udeb.templates:6001 ../user-setup-udeb.templates:13001
-msgid ""
-"A good password will contain a mixture of letters, numbers and punctuation "
-"and should be changed at regular intervals."
-msgstr ""
-"चांगला परवलीचा शब्द अंक, अक्षरे व विरामचिन्हे यांच्या मिश्रणातून बनवता येईल. तसेच तो "
-"वेळोवेळी बदलला पाहिजे."
+"काही खाते प्रशासकीय सुपर-युजर विशेषाधिकारांसह उपलब्ध असणे आवश्यक आहे,त्या खात्याचा "
+"पासवर्ड असा असावा की अंदाज लावता येणार नाही."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"The root user should not have an empty password. If you leave this empty, "
-"the root account will be disabled and the system's initial user account will "
-"be given the power to become root using the \"sudo\" command."
+"To allow direct password-based access via the 'root' account, you can set "
+"the password for that account here."
 msgstr ""
-"मूल वापरदाराचा परवलीचा शब्द रिक्त असता कामा नये. आपण हा रिक्त ठेवल्यास, मूल "
-"वापरदाराचे खाते कार्यअक्षम होईल, व प्रणालीच्या सर्वप्रथम वापरदाराला \"sudo\" आज्ञा "
-"देऊन मूल होता येण्याची शक्ती प्रदान केली जाईल."
+"'रूट' खात्याद्वारे थेट पासवर्ड-आधारित प्रवेश देण्यासाठी, तुम्ही त्या खात्यासाठी पासवर्ड येथे "
+"सेट करू शकता."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
-msgid "Note that you will not be able to see the password as you type it."
-msgstr "परवलीचा शब्द टाईप करताना तुम्हाला तो दिसणार नाही, याची नोंद घ्या."
+msgid ""
+"Alternatively, you can lock the root account's password by leaving this "
+"setting empty, and instead use the system's initial user account (which will "
+"be set up in the next step) to gain administrative privileges. This will be "
+"enabled for you by adding that initial user to the 'sudo' group."
+msgstr ""
+"पर्यायीरित्या, तुम्ही ही सेटिंग रिकामी ठेवून रूट खात्याचा पासवर्ड लॉक करू शकता आणि "
+"त्याऐवजी प्रशासकीय विशेषाधिकार मिळविण्यासाठी सिस्टमचे प्रारंभिक वापरकर्ता खाते (जे पुढील "
+"चरणात सेट केले जाईल) वापरू शकता. 'sudo' गटात त्या प्रारंभिक वापरकर्त्याला जोडून हे "
+"तुमच्यासाठी सक्षम केले जाईल."
+
+#. Type: password
+#. Description
+#. :sl1:
+#: ../user-setup-udeb.templates:6001
+msgid "Note: what you type here will be hidden (unless you select to show it)."
+msgstr ""
+"टीप: तुम्ही येथे जे टाइप करता ते लपवले जाईल (जोपर्यंत तुम्ही ते दाखवायचे निवडत नाही "
+"तोपर्यंत)."
 
 #. Type: password
 #. Description
@@ -150,11 +147,12 @@ msgstr ""
 #: ../user-setup-udeb.templates:8001
 msgid ""
 "Note that you may create it later (as well as any additional account) by "
-"typing 'adduser <username>' as root, where <username> is an username, like "
+"typing 'adduser <username>' as root, where <username> is a username, like "
 "'imurdock' or 'rms'."
 msgstr ""
-"मूल असताना 'adduser <username>' टाइप करून आपण हे (तसेच आणखी खाते) नंतरसुद्धा बनवू "
-"शकता. यात <username> हे वापरदाराचे नाव आहे."
+"लक्षात ठेवा की तुम्ही ते नंतर (तसेच कोणतेही अतिरिक्त खाते) रूट म्हणून 'adduser "
+"<username>' टाइप करून तयार करू शकता, जिथे <username> हे वापरकर्तानाव आहे, जसे की "
+"'imurdock' किंवा 'rms'."
 
 #. Type: string
 #. Description
@@ -255,6 +253,13 @@ msgstr "नवीन वापरदारासाठी परवलीचा 
 #. Type: password
 #. Description
 #. :sl1:
+#: ../user-setup-udeb.templates:13001
+msgid "Make sure to select a strong password that cannot be guessed."
+msgstr "अंदाज लावता येणार नाही असा मजबूत पासवर्ड निवडा."
+
+#. Type: password
+#. Description
+#. :sl1:
 #: ../user-setup-udeb.templates:14001
 msgid ""
 "Please enter the same user password again to verify you have typed it "
@@ -292,31 +297,10 @@ msgid ""
 msgstr ""
 "आपण परवलीचा शब्द रिक्त ठेवला आहे, जे मान्य नाही. रिक्त नसलेला परवलीचा शब्द निवडा."
 
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid "Enable shadow passwords?"
-msgstr "छाया परवलीचे शब्द कार्यसक्षम करायवे?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid ""
-"Shadow passwords make your system more secure because nobody is able to view "
-"even encrypted passwords. The passwords are stored in a separate file that "
-"can only be read by special programs. The use of shadow passwords is "
-"strongly recommended, except in a few cases such as NIS environments."
-msgstr ""
-"छाया परवलीचे शब्द आपल्या प्रणालीला जास्त सुरक्षित बनवतात, कारण सांकेतिक केलेले परवलीचे "
-"शब्द देखिल कोणीही पाहू शकत नाही. एनआयएस एनव्हायर्नमेंट सारख्या काही बाबी वगळता  छाया "
-"परवलीचे शब्द वापरण्याची जोरदार शिफारस केली जात आहे."
-
 #. Type: title
 #. Description
 #. :sl1:
-#: ../user-setup-udeb.templates:18001
+#: ../user-setup-udeb.templates:17001
 msgid "Set up users and passwords"
 msgstr "वापरदार व परवलीशब्द निश्चिती करा"
 
@@ -324,6 +308,6 @@ msgstr "वापरदार व परवलीशब्द निश्चि
 #. Description
 #. finish-install progress bar item
 #. :sl1:
-#: ../user-setup-udeb.templates:19001
+#: ../user-setup-udeb.templates:18001
 msgid "Setting users and passwords..."
 msgstr "वापरकर्ते व परवलीशब्द निश्चिती केले जात आहेत..."

@@ -19,21 +19,26 @@
 # Gediminas Paulauskas <menesis@delfi.lt>, 2000-2001.
 # Alastair McKinstry <mckinstry@computer.org>, 2001,2002.
 # Kęstutis Biliūnas <kebil@kaunas.init.lt>, 2004, 2006, 2008, 2009, 2010.
-# Rimas Kudelis <rq@akl.lt>, 2012, 2017.
+# Rimas Kudelis <rq@akl.lt>, 2012, 2017, 2018.
+# Tautvydas Zukauskas <tautzuk@tutanota.com>, 2020.
+# Andrius Ulrikas <andrius@ulrikas.lt>, 2020.
+# Andrius Majauskas <komitetas@gmail.com>, 2020.
+# Kornelijus Tvarijanavičius <kornelitvari@protonmail.com>, 2020, 2021.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: user-setup@packages.debian.org\n"
-"POT-Creation-Date: 2012-02-16 22:49+0000\n"
-"PO-Revision-Date: 2017-11-26 20:23+0000\n"
-"Last-Translator: Rimas Kudelis <rq@akl.lt>\n"
+"POT-Creation-Date: 2024-04-06 20:02+0000\n"
+"PO-Revision-Date: 2025-02-22 23:52+0000\n"
+"Last-Translator: Rimas Kudelis <rimas@kudelis.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || n"
-"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Type: boolean
 #. Description
@@ -66,54 +71,47 @@ msgstr "Administratoriaus (root) slaptažodis:"
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"You need to set a password for 'root', the system administrative account. A "
-"malicious or unqualified user with root access can have disastrous results, "
-"so you should take care to choose a root password that is not easy to guess. "
-"It should not be a word found in dictionaries, or a word that could be "
-"easily associated with you."
+"Some account needs to be available with administrative super-user "
+"privileges. The password for that account should be something that cannot be "
+"guessed."
 msgstr ""
-"Turite nurodyti naudotojo „root“ (sistemos administravimo paskyros) "
-"slaptažodį. Piktavalis ar nekvalifikuotas naudotojas, turintis „root“ "
-"teises, gali sugadinti sistemą, todėl turėtumėte pasirinkti slaptažodį, kurį "
-"būtų sunku atspėti. Tai neturėtų būti žodis, randamas žodyne ar lengvai "
-"susiejamas su jumis. Geras slaptažodis turėtų būti sudarytas iš raidžių, "
-"skaitmenų ir skyrybos ženklų, ir turėtų būti reguliariai keičiamas. "
-"Slaptažodis keičiamas programa „passwd“."
-
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#: ../user-setup-udeb.templates:6001 ../user-setup-udeb.templates:13001
-msgid ""
-"A good password will contain a mixture of letters, numbers and punctuation "
-"and should be changed at regular intervals."
-msgstr ""
-"Saugus slaptažodis turėtų būti sudarytas iš raidžių, skaitmenų bei skyrybos "
-"ženklų, ir turėtų būti reguliariai keičiamas."
+"Sistemoje turi egzistuoti paskyra, turinti administratoriaus "
+"(supernaudotojo) teises. Šios paskyros slaptažodis turėtų būti neatspėjamas."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"The root user should not have an empty password. If you leave this empty, "
-"the root account will be disabled and the system's initial user account will "
-"be given the power to become root using the \"sudo\" command."
+"To allow direct password-based access via the 'root' account, you can set "
+"the password for that account here."
 msgstr ""
-"Naudotojas root negali neturėti slaptažodžio. Jei Jūs paliksite jį tuščią, "
-"„root“ (administratoriaus) paskyra bus uždrausta, ir pirmajai kuriamai "
-"naudotojo paskyrai bus suteikta galimybė įgyti „root“ teises, pasinaudojus "
-"„sudo“ komanda."
+"Jei norite, kad „root“ naudotojas galėtų prie sistemos tiesiogiai jungtis su "
+"slaptažodžiu, čia galite jo slaptažodį nustatyti."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
-msgid "Note that you will not be able to see the password as you type it."
-msgstr "Įvesdami slaptažodį, įvedamų simbolių ekrane nematysite."
+msgid ""
+"Alternatively, you can lock the root account's password by leaving this "
+"setting empty, and instead use the system's initial user account (which will "
+"be set up in the next step) to gain administrative privileges. This will be "
+"enabled for you by adding that initial user to the 'sudo' group."
+msgstr ""
+"Kita galimybė – šiam naudotojui uždrausti tiesioginį prisijungimą su "
+"slaptažodžiu, vietoje to, galimybę įgyti administratoriaus teises suteikiant "
+"pirmajam sistemos naudotojui (kurį sukursite kitame žingsnyje). Tai "
+"įgyvendinama, minėtąjį naudotoją įtraukiant į „sudo“ grupę."
+
+#. Type: password
+#. Description
+#. :sl1:
+#: ../user-setup-udeb.templates:6001
+msgid "Note: what you type here will be hidden (unless you select to show it)."
+msgstr ""
+"Pastaba: čia vedamo teksto nematysite (nebent pasirinktumėte, kad jis būtų "
+"matomas)."
 
 #. Type: password
 #. Description
@@ -164,7 +162,7 @@ msgstr ""
 #: ../user-setup-udeb.templates:8001
 msgid ""
 "Note that you may create it later (as well as any additional account) by "
-"typing 'adduser <username>' as root, where <username> is an username, like "
+"typing 'adduser <username>' as root, where <username> is a username, like "
 "'imurdock' or 'rms'."
 msgstr ""
 "Atkreipkite dėmesį, kad šią paskyrą (account) galite sukurti ir vėliau (kaip "
@@ -272,6 +270,14 @@ msgstr "Įveskite naujojo naudotojo slaptažodį:"
 #. Type: password
 #. Description
 #. :sl1:
+#: ../user-setup-udeb.templates:13001
+msgid "Make sure to select a strong password that cannot be guessed."
+msgstr ""
+"Nepamirškite, jog slaptažodis turėtų būti stiprus ir sunkiai atspėjamas."
+
+#. Type: password
+#. Description
+#. :sl1:
 #: ../user-setup-udeb.templates:14001
 msgid ""
 "Please enter the same user password again to verify you have typed it "
@@ -312,33 +318,10 @@ msgstr ""
 "Įvedėte tuščią slaptažodį, tačiau tai neleistina. Pasirinkite netuščią "
 "slaptažodį."
 
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid "Enable shadow passwords?"
-msgstr "Ar leisti paslėptų (shadow) slaptažodžių palaikymą?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid ""
-"Shadow passwords make your system more secure because nobody is able to view "
-"even encrypted passwords. The passwords are stored in a separate file that "
-"can only be read by special programs. The use of shadow passwords is "
-"strongly recommended, except in a few cases such as NIS environments."
-msgstr ""
-"Paslėpti (shadow) slaptažodžiai pagerina sistemos saugumą, kadangi niekas "
-"negalės matyti net ir užšifruotų slaptažodžių. Slaptažodžiai saugomi "
-"atskirame faile, kurį skaityti gali tik specialios programos. Labai "
-"rekomenduojama naudoti paslėptus slaptažodžius, bet jei žadate naudoti NIS, "
-"gali kilti problemų."
-
 #. Type: title
 #. Description
 #. :sl1:
-#: ../user-setup-udeb.templates:18001
+#: ../user-setup-udeb.templates:17001
 msgid "Set up users and passwords"
 msgstr "Naudotojų ir slaptažodžių nustatymas"
 
@@ -346,6 +329,6 @@ msgstr "Naudotojų ir slaptažodžių nustatymas"
 #. Description
 #. finish-install progress bar item
 #. :sl1:
-#: ../user-setup-udeb.templates:19001
+#: ../user-setup-udeb.templates:18001
 msgid "Setting users and passwords..."
 msgstr "Nustatomi naudotojai ir slaptažodžiai..."
