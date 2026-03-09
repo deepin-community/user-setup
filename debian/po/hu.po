@@ -21,30 +21,30 @@
 #   Kalman Kemenczy <kkemenczy@gmail.com>, 2010.
 #   Andras TIMAR <timar@gnome.hu>, 2000-2001.
 # SZERVÁC Attila <sas@321.hu>, 2012.
-# Dr. Nagy Elemér Károly <eknagy@omikk.bme.hu>, 2012.
+# Dr. Nagy Elemér Károly <eknagy@omikk.bme.hu>, 2012, 2018.
 # Judit Gyimesi <judit.gyimesi.x@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: user-setup@packages.debian.org\n"
-"POT-Creation-Date: 2012-02-16 22:49+0000\n"
-"PO-Revision-Date: 2013-11-18 21:15+0100\n"
-"Last-Translator: Judit Gyimesi <judit.gyimesi.x@gmail.com>\n"
+"POT-Creation-Date: 2024-04-06 20:02+0000\n"
+"PO-Revision-Date: 2025-06-25 18:29+0000\n"
+"Last-Translator: Szia Tomi <sziatomi01@gmail.com>\n"
 "Language-Team: Debian L10n Hungarian <debian-l10n-hungarian@lists.debian."
 "org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n>1;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:5001
 msgid "Allow login as root?"
-msgstr "Engedélyezi a bejelentkezést root-ként?"
+msgstr "Engedélyezed a bejelentkezést rendszergazdaként?"
 
 #. Type: boolean
 #. Description
@@ -54,65 +54,65 @@ msgid ""
 "If you choose not to allow root to log in, then a user account will be "
 "created and given the power to become root using the 'sudo' command."
 msgstr ""
-"Ha nem engedélyezi a root-ként való bejelentkezést, akkor a létrejövő "
-"felhasználó a 'sudo' paranccsal érhet majd el root jogokat."
+"Ha nem engedélyezed a rendszergazdaként való bejelentkezést, akkor a "
+"létrejövő felhasználó a „sudo” paranccsal érhet majd el rendszergazdai "
+"jogokat."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid "Root password:"
-msgstr "A 'root' felhasználó jelszava:"
+msgstr "A rendszergazda jelszava:"
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"You need to set a password for 'root', the system administrative account. A "
-"malicious or unqualified user with root access can have disastrous results, "
-"so you should take care to choose a root password that is not easy to guess. "
-"It should not be a word found in dictionaries, or a word that could be "
-"easily associated with you."
+"Some account needs to be available with administrative super-user "
+"privileges. The password for that account should be something that cannot be "
+"guessed."
 msgstr ""
-"Most kell megadni a 'root', vagyis a rendszergazda hozzáférés jelszavát. "
-"Rosszakaró vagy egy nagyon hozzá nem értő felhasználó root hozzáférése "
-"végzetes, így csak nagyon nehezen kitalálható root jelszót szabad adni. Ne "
-"adjon szótári, vagy könnyen Önhöz köthető szót."
-
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#: ../user-setup-udeb.templates:6001 ../user-setup-udeb.templates:13001
-msgid ""
-"A good password will contain a mixture of letters, numbers and punctuation "
-"and should be changed at regular intervals."
-msgstr ""
-"A jó jelszó betűk, számok és írásjelek keverékéből áll és sűrű, szabályos "
-"időközönként (legfeljebb havonta) cserére kerül."
+"Az egyik fióknak rendszergazdai (szuper-felhasználói) jogosultságokkal kell "
+"rendelkeznie. A fiók jelszavának olyannak kell lennie, hogy ne tudják "
+"kitalálni."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"The root user should not have an empty password. If you leave this empty, "
-"the root account will be disabled and the system's initial user account will "
-"be given the power to become root using the \"sudo\" command."
+"To allow direct password-based access via the 'root' account, you can set "
+"the password for that account here."
 msgstr ""
-"A root felhasználó jelszava nem lehet üres. Ha üresen hagyja, a root fiók ki "
-"lesz kapcsolva és a rendszer kezdeti felhasználó fiókja a \"sudo\" "
-"paranccsal kap root jogot."
+"Ha közvetlen jelszóalapú hozzáférést szeretnél engedélyezni a rendszergazdai "
+"(root) fióknak, itt tudod beállítani a fiók jelszavát."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
-msgid "Note that you will not be able to see the password as you type it."
-msgstr "Fontos, hogy a begépelés közben a jelszó nem jelenik meg."
+msgid ""
+"Alternatively, you can lock the root account's password by leaving this "
+"setting empty, and instead use the system's initial user account (which will "
+"be set up in the next step) to gain administrative privileges. This will be "
+"enabled for you by adding that initial user to the 'sudo' group."
+msgstr ""
+"Egyébként a renszergazdai fiók jelszavát le is zárhatod, ha ezt a beállítást "
+"üresen hagyod, és helyette a rendszer kezdeti felhasználói fiókját (amelyet "
+"a következő lépésben állítunk be) használod a rendszergazdai jogosultságok "
+"megszerzéséhez. Ezt a kezdeti felhasználónak a „sudo” csoporthoz való "
+"hozzáadásával tudod lehetővé tenni."
+
+#. Type: password
+#. Description
+#. :sl1:
+#: ../user-setup-udeb.templates:6001
+msgid "Note: what you type here will be hidden (unless you select to show it)."
+msgstr ""
+"Megjegyzés: amit ide beírsz, az el lesz rejtve (hacsak nem választod a "
+"megjelenítést)."
 
 #. Type: password
 #. Description
@@ -122,7 +122,7 @@ msgstr "Fontos, hogy a begépelés közben a jelszó nem jelenik meg."
 #. :sl1:
 #: ../user-setup-udeb.templates:7001 ../user-setup-udeb.templates:14001
 msgid "Re-enter password to verify:"
-msgstr "Írja be újra a jelszavát megerősítés végett:"
+msgstr "Add meg újra a jelszót az ellenőrzéshez:"
 
 #. Type: password
 #. Description
@@ -132,8 +132,8 @@ msgid ""
 "Please enter the same root password again to verify that you have typed it "
 "correctly."
 msgstr ""
-"Írja be újra a 'root' felhasználó jelszavát, hogy megerősítse, hogy helyesen "
-"gépelte be."
+"Írd be újra a rendszergazdai felhasználó jelszavát, annak megerősítésére, "
+"hogy helyesen gépelted be."
 
 # Type: boolean
 # Description
@@ -143,7 +143,7 @@ msgstr ""
 #. :sl2:
 #: ../user-setup-udeb.templates:8001
 msgid "Create a normal user account now?"
-msgstr "Létrehoz most egy sima felhasználói hozzáférést?"
+msgstr "Létrehozol egy sima felhasználói hozzáférést most?"
 
 # Type: boolean
 # Description
@@ -158,11 +158,10 @@ msgid ""
 "result in disaster. You should create a normal user account to use for those "
 "day-to-day tasks."
 msgstr ""
-"A mindennapi tevékenységekre a 'root' felhasználót, rendszergazdai jogokat "
-"soha de soha nem használjuk, például nem olvasunk vele levelet és az "
-"ilyenfajta felhasználás nagyon rossz ötlet, mert a legkisebb hiba is "
-"katasztrófát okozhat. Hozzon létre egy sima felhasználói hozzáférést a "
-"mindennapi használathoz."
+"Nem jó ötlet a rendszergazdai (root) fiókot használni a szokásos napi "
+"tevékenységekhez, például levelek olvasásához, mert egy apró hiba is "
+"katasztrófához vezethet. Létre kell hoznod egy normál felhasználói fiókot, "
+"amelyet ezekre a mindennapi feladatokra használhatsz."
 
 # Type: boolean
 # Description
@@ -173,20 +172,20 @@ msgstr ""
 #: ../user-setup-udeb.templates:8001
 msgid ""
 "Note that you may create it later (as well as any additional account) by "
-"typing 'adduser <username>' as root, where <username> is an username, like "
+"typing 'adduser <username>' as root, where <username> is a username, like "
 "'imurdock' or 'rms'."
 msgstr ""
-"A most létrehozandó sima felhasználó mellé továbbiakat később is létre lehet "
-"hozni például az 'adduser <felhasználónév>' paranccsal rendszergazdaként, "
-"ahol a <felhasználónév> szokásos felhasználónév formájú, mint például "
-"'imurdock' vagy 'rms'."
+"A most létrehozandó egyszerű felhasználó mellé később továbbiakat is létre "
+"hozhatsz, ha rendszergazdaként beírod az „adduser <felhasználónév>” "
+"paranccsot, ahol a <felhasználónév> egy szokásos felhasználónév például: "
+"imurdock, maor, laci-ur, gipsz_jakab."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:9001
 msgid "Full name for the new user:"
-msgstr "Az új felhasználó TELJES Neve:"
+msgstr "Az új felhasználó teljes neve:"
 
 #. Type: string
 #. Description
@@ -196,9 +195,9 @@ msgid ""
 "A user account will be created for you to use instead of the root account "
 "for non-administrative activities."
 msgstr ""
-"Egy sima felhasználói hozzáférést hozunk létre, melynek célja az, hogy a "
-"root fiók helyett EZT használja mindennap és ezzel végezze mindennapos "
-"tevékenységeit."
+"Létrejön egy korlátozott jogosultságokkal rendelkező felhasználói fiók, "
+"amelyet a rendszergazdai fiók helyett használhatsz a mindennapi (nem "
+"rendszergazdai) tevékenységekhez."
 
 #. Type: string
 #. Description
@@ -210,17 +209,17 @@ msgid ""
 "program which displays or uses the user's real name. Your full name is a "
 "reasonable choice."
 msgstr ""
-"Adja meg e felhasználó IGAZI Nevét. Ez az adat például e felhasználó által "
-"küldött alapértelmezett feladóként használható levelekben, vagy más "
-"programban, mely kiírja vagy használja a felhasználó IGAZI Nevét. A teljes "
-"név egy jó választás."
+"Kérlek, add meg ennek a felhasználónak a valódi nevét. Ez az adat például a "
+"felhasználó által küldött levelekben alapértelmezett feladóként használható, "
+"valamint minden olyan programban, amely a felhasználó valódi nevét "
+"megjeleníti vagy használja. A teljes neved jó választás."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:10001
 msgid "Username for your account:"
-msgstr "Felhasználóneve:"
+msgstr "A fiókod felhasználóneve:"
 
 #. Type: string
 #. Description
@@ -231,9 +230,9 @@ msgid ""
 "choice. The username should start with a lower-case letter, which can be "
 "followed by any combination of numbers and more lower-case letters."
 msgstr ""
-"Adjon felhasználónevet a hozzáféréshez. A keresztnév általában meg szokott "
-"felelni a célra. A lényeg, hogy a felhasználónév kisbetűvel kezdődjön, "
-"azután számok és további kisbetűk tetszőleges kombinációja állhat."
+"Add meg az új fókod felhasználónevét. A keresztnév általában meg szokott "
+"felelni erre a célra. A felhasználónévnek kisbetűvel kell kezdődni, utána "
+"számok és további kisbetűk tetszőleges kombinációja állhat."
 
 # Type: error
 # Description
@@ -282,8 +281,8 @@ msgid ""
 "The username you entered (${USERNAME}) is reserved for use by the system. "
 "Please select a different one."
 msgstr ""
-"A megadott felhasználónevet (${USERNAME}) a rendszer használja. Kérem, "
-"válasszon másikat."
+"A megadott felhasználónevet (${USERNAME}) a rendszer használja. Kérlek, "
+"válassz másikat."
 
 #. Type: password
 #. Description
@@ -295,11 +294,20 @@ msgstr "Az új felhasználó jelszavának megadása:"
 #. Type: password
 #. Description
 #. :sl1:
+#: ../user-setup-udeb.templates:13001
+msgid "Make sure to select a strong password that cannot be guessed."
+msgstr ""
+"Ügyelj arra, hogy olyan erős jelszót válassz, amelyet nem lehet kitalálni."
+
+#. Type: password
+#. Description
+#. :sl1:
 #: ../user-setup-udeb.templates:14001
 msgid ""
 "Please enter the same user password again to verify you have typed it "
 "correctly."
-msgstr "Írja be újra a jelszót, hogy megerősítse, hogy helyesen gépelte be."
+msgstr ""
+"Írd be újra a jelszót, annak megerősítésére, hogy helyesen gépelted be."
 
 # Type: error
 # Description
@@ -319,16 +327,8 @@ msgstr "Jelszóbeviteli hiba"
 #. :sl2:
 #: ../user-setup-udeb.templates:15001
 msgid "The two passwords you entered were not the same. Please try again."
-msgstr "A két megadott jelszó eltér. Próbálja újra."
+msgstr "A megadott két jelszó nem ugyanaz. Kérlek, próbáld újra."
 
-# #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
-# Type: error
-# Description
-# :sl2:
-# #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
-# Type: error
-# Description
-# :sl3:
 #. Type: error
 #. Description
 #. :sl2:
@@ -336,14 +336,6 @@ msgstr "A két megadott jelszó eltér. Próbálja újra."
 msgid "Empty password"
 msgstr "Üres jelszó"
 
-# #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
-# Type: error
-# Description
-# :sl2:
-# #-#-#-#-#  templates.pot (PACKAGE VERSION)  #-#-#-#-#
-# Type: error
-# Description
-# :sl3:
 #. Type: error
 #. Description
 #. :sl2:
@@ -351,47 +343,21 @@ msgstr "Üres jelszó"
 msgid ""
 "You entered an empty password, which is not allowed. Please choose a non-"
 "empty password."
-msgstr "Üres jelszó megadása nem engedélyezett. Nem-üres jelszót kell megadni."
-
-# Type: boolean
-# Description
-# :sl2:
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid "Enable shadow passwords?"
-msgstr "Árnyék jelszavak legyenek?"
-
-# Type: boolean
-# Description
-# :sl2:
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid ""
-"Shadow passwords make your system more secure because nobody is able to view "
-"even encrypted passwords. The passwords are stored in a separate file that "
-"can only be read by special programs. The use of shadow passwords is "
-"strongly recommended, except in a few cases such as NIS environments."
 msgstr ""
-"Az árnyék jelszavak a rendszert sokkal biztonságosabbá teszik, mert még a "
-"titkosított jelszavak sem olvashatók. A jelszavak külön fájlba kerülnek, "
-"mely csak különleges programokkal olvasható. Az árnyék jelszavak használata "
-"erősen ajánlott, kivéve néhány esetet, például NIS környezetben."
+"Üres jelszót adtál meg, ami nem megengedett. Kérlek, válassz egy nem üres "
+"jelszót."
 
 #. Type: title
 #. Description
 #. :sl1:
-#: ../user-setup-udeb.templates:18001
+#: ../user-setup-udeb.templates:17001
 msgid "Set up users and passwords"
-msgstr "Felhasználók és jelszavaik felvétele"
+msgstr "Felhasználók és jelszavaik beállítása"
 
 #. Type: text
 #. Description
 #. finish-install progress bar item
 #. :sl1:
-#: ../user-setup-udeb.templates:19001
+#: ../user-setup-udeb.templates:18001
 msgid "Setting users and passwords..."
-msgstr "Felhasználók és jelszavaik beállítása..."
+msgstr "Felhasználók és a jelszavaik beállítása..."

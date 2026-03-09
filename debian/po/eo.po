@@ -4,31 +4,33 @@
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
 # translation of Debian Installer templates to Esperanto.
-# Copyright (C) 2005-2011 Software in the Public Interest, Inc.
+# Copyright (C) 2005-2013 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
 # Samuel Gimeno <sgimeno@gmail.com>, 2005.
 # Serge Leblanc <serge.leblanc@wanadoo.fr>, 2005, 2006, 2007.
-# Felipe Castro <fefcas@gmail.com>, 2008, 2009, 2010, 2011.
+# Felipe Castro <fefcas@gmail.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2017, 2018, 2020, 2022.
 #
 # Translations from iso-codes:
 # Alastair McKInstry <mckinstry@computer.org>, 2001,2002.
 # Copyright (C) 2001,2002,2003,2004 Free Software Foundation, Inc.
 # D. Dale Gulledge <dsplat@rochester.rr.com> (translations from drakfw), 2001.
 # Edmund GRIMLEY EVANS <edmundo@rano.org>, 2004-2011
+# phlostically <phlostically@mailinator.com>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: user-setup@packages.debian.org\n"
-"POT-Creation-Date: 2012-02-16 22:49+0000\n"
-"PO-Revision-Date: 2012-02-18 14:53-0300\n"
-"Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
+"POT-Creation-Date: 2024-04-06 20:02+0000\n"
+"PO-Revision-Date: 2024-03-22 22:13+0000\n"
+"Last-Translator: phlostically <phlostically@mailinator.com>\n"
 "Language-Team: Esperanto <debian-l10n-esperanto@lists.debian.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. Type: boolean
 #. Description
@@ -60,50 +62,37 @@ msgstr "Ĉefuzanta pasvorto:"
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"You need to set a password for 'root', the system administrative account. A "
-"malicious or unqualified user with root access can have disastrous results, "
-"so you should take care to choose a root password that is not easy to guess. "
-"It should not be a word found in dictionaries, or a word that could be "
-"easily associated with you."
+"Some account needs to be available with administrative super-user "
+"privileges. The password for that account should be something that cannot be "
+"guessed."
 msgstr ""
-"Vi devas elekti pasvorton por ĉefuzanto ('root'), la sistem-administra "
-"konto. Malica aŭ malsperta uzanto kiu alirus la konton povus provoki "
-"katastrofon. Sekve, tiu pasvorto estu malfacile divenebla, ne ekzistu en "
-"vortaro aŭ rilatu al vi."
-
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#: ../user-setup-udeb.templates:6001 ../user-setup-udeb.templates:13001
-msgid ""
-"A good password will contain a mixture of letters, numbers and punctuation "
-"and should be changed at regular intervals."
-msgstr ""
-"Bona pasvorto enhavas miksaĵon el literoj, ciferoj, interpunkcio kaj ĝi "
-"devus esti regule ŝanĝita."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"The root user should not have an empty password. If you leave this empty, "
-"the root account will be disabled and the system's initial user account will "
-"be given the power to become root using the \"sudo\" command."
+"To allow direct password-based access via the 'root' account, you can set "
+"the password for that account here."
 msgstr ""
-"La ĉefadministranto ne devus havi malplenan pasvorton. Se vi lasas tion ĉi "
-"malplena, la ĉefuzantan konton estos malebligata kaj la komenca uzant-konto "
-"de la sistemo havos la povon fariĝi administranton per la komando \"sudo\"."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
-msgid "Note that you will not be able to see the password as you type it."
-msgstr "Rimarku, ke la pasvorto ne estos videbla dum vi skribas ĝin."
+msgid ""
+"Alternatively, you can lock the root account's password by leaving this "
+"setting empty, and instead use the system's initial user account (which will "
+"be set up in the next step) to gain administrative privileges. This will be "
+"enabled for you by adding that initial user to the 'sudo' group."
+msgstr ""
+
+#. Type: password
+#. Description
+#. :sl1:
+#: ../user-setup-udeb.templates:6001
+msgid "Note: what you type here will be hidden (unless you select to show it)."
+msgstr ""
 
 #. Type: password
 #. Description
@@ -150,9 +139,10 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../user-setup-udeb.templates:8001
+#, fuzzy
 msgid ""
 "Note that you may create it later (as well as any additional account) by "
-"typing 'adduser <username>' as root, where <username> is an username, like "
+"typing 'adduser <username>' as root, where <username> is a username, like "
 "'imurdock' or 'rms'."
 msgstr ""
 "Rimarku ke vi povas krei ĝin poste (same por aliaj aldonaj kontoj) tajponte "
@@ -260,6 +250,13 @@ msgstr "Elektu pasvorton por la nova uzanto:"
 #. Type: password
 #. Description
 #. :sl1:
+#: ../user-setup-udeb.templates:13001
+msgid "Make sure to select a strong password that cannot be guessed."
+msgstr ""
+
+#. Type: password
+#. Description
+#. :sl1:
 #: ../user-setup-udeb.templates:14001
 msgid ""
 "Please enter the same user password again to verify you have typed it "
@@ -299,32 +296,10 @@ msgstr ""
 "Vi tajpis malplenan pasvorton, tio ne estas permesite. Bonvolu tajpi ne-"
 "malplenan pasvorton."
 
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid "Enable shadow passwords?"
-msgstr "Ĉu aktivigi kaŝitajn pasvortojn ('shadow passwords')?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid ""
-"Shadow passwords make your system more secure because nobody is able to view "
-"even encrypted passwords. The passwords are stored in a separate file that "
-"can only be read by special programs. The use of shadow passwords is "
-"strongly recommended, except in a few cases such as NIS environments."
-msgstr ""
-"Kaŝitaj pasvortoj sekurigas vian sistemon ĉar neniu kapablas vidi eĉ "
-"ĉifritajn pasvortojn. La pasvortoj estas konservitaj en aparta dosiero kiu "
-"estas legebla nur per specialaj programoj. Uzado de kaŝitaj pasvortoj estas "
-"forte rekomendita, krom en maloftaj situacioj, kiel ekzemple en medioj 'NIS'."
-
 #. Type: title
 #. Description
 #. :sl1:
-#: ../user-setup-udeb.templates:18001
+#: ../user-setup-udeb.templates:17001
 msgid "Set up users and passwords"
 msgstr "Agordi uzulojn kaj pasvortojn"
 
@@ -332,6 +307,6 @@ msgstr "Agordi uzulojn kaj pasvortojn"
 #. Description
 #. finish-install progress bar item
 #. :sl1:
-#: ../user-setup-udeb.templates:19001
+#: ../user-setup-udeb.templates:18001
 msgid "Setting users and passwords..."
 msgstr "Akomodado de uzantoj kaj pasvortoj..."

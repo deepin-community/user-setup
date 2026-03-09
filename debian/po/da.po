@@ -6,7 +6,8 @@
 # translation of debian-installer_packages_po_sublevel1_da.po to
 # Danish messages for debian-installer.
 # This file is distributed under the same license as debian-installer.
-# Joe Hansen <joedalton2@yahoo.dk>, 2011, 2012, 2013, 2014, 2015, 2016.
+# Michael Millet <mikevlet@protonmail.com>, 2021.
+# Joe Hansen <joedalton2@yahoo.dk>, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2021.
 # Ask Hjorth Larsen <asklarsen@gmail.com>, 2010.
 # Mads Bille Lundby <lundbymads@gmail.com, 2009.
 # Henrik Christian Grove <debian@3001.dk>, 2008.
@@ -38,15 +39,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_da\n"
 "Report-Msgid-Bugs-To: user-setup@packages.debian.org\n"
-"POT-Creation-Date: 2012-02-16 22:49+0000\n"
-"PO-Revision-Date: 2016-09-18 20:20+0200\n"
-"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
+"POT-Creation-Date: 2024-04-06 20:02+0000\n"
+"PO-Revision-Date: 2023-05-10 00:53+0000\n"
+"Last-Translator: Tino Didriksen <mail@tinodidriksen.com>\n"
 "Language-Team: <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. Type: boolean
 #. Description
@@ -78,51 +79,37 @@ msgstr "Root-adgangskode:"
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"You need to set a password for 'root', the system administrative account. A "
-"malicious or unqualified user with root access can have disastrous results, "
-"so you should take care to choose a root password that is not easy to guess. "
-"It should not be a word found in dictionaries, or a word that could be "
-"easily associated with you."
+"Some account needs to be available with administrative super-user "
+"privileges. The password for that account should be something that cannot be "
+"guessed."
 msgstr ""
-"Du skal angive en adgangskode for 'root', systemets administrationskonto. "
-"Hvis en ondsindet eller ukvalificeret bruger får adgang som root, kan det "
-"have katastrofale følger, så du bør vælge en root-adgangskode, der ikke er "
-"for let at gætte. Den bør ikke være et ord, der findes i ordbøger eller et "
-"ord, som nemt kan forbindes med dig."
-
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#: ../user-setup-udeb.templates:6001 ../user-setup-udeb.templates:13001
-msgid ""
-"A good password will contain a mixture of letters, numbers and punctuation "
-"and should be changed at regular intervals."
-msgstr ""
-"En god adgangskode indeholder en blanding af bogstaver, tal og tegnsætning "
-"og bør ændres fra tid til anden."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"The root user should not have an empty password. If you leave this empty, "
-"the root account will be disabled and the system's initial user account will "
-"be given the power to become root using the \"sudo\" command."
+"To allow direct password-based access via the 'root' account, you can set "
+"the password for that account here."
 msgstr ""
-"Root-brugeren bør ikke have en tom adgangskode. Hvis du lader dette felt stå "
-"tomt, vil root-kontoen blive deaktiveret og systemets første brugerkonto vil "
-"blive tildelt rettigheder til at blive root, når \"sudo\"-kommandoen bruges."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
-msgid "Note that you will not be able to see the password as you type it."
-msgstr "Bemærk at du ikke vil kunne se adgangskoden imens du skriver det."
+msgid ""
+"Alternatively, you can lock the root account's password by leaving this "
+"setting empty, and instead use the system's initial user account (which will "
+"be set up in the next step) to gain administrative privileges. This will be "
+"enabled for you by adding that initial user to the 'sudo' group."
+msgstr ""
+
+#. Type: password
+#. Description
+#. :sl1:
+#: ../user-setup-udeb.templates:6001
+msgid "Note: what you type here will be hidden (unless you select to show it)."
+msgstr ""
 
 #. Type: password
 #. Description
@@ -162,7 +149,7 @@ msgid ""
 "result in disaster. You should create a normal user account to use for those "
 "day-to-day tasks."
 msgstr ""
-"Det er en dårlig idé, at bruge root-kontoen til almindelige dagligdags "
+"Det er en dårlig ide, at bruge root-kontoen til almindelige dagligdags "
 "gøremål, som f.eks. at læse e-post, da selv en lille fejltagelse kan få "
 "katastrofale følger. Du kan nu oprette en normal brugerkonto, som kan "
 "benyttes til disse almindelige arbejdsopgaver."
@@ -171,9 +158,10 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../user-setup-udeb.templates:8001
+#, fuzzy
 msgid ""
 "Note that you may create it later (as well as any additional account) by "
-"typing 'adduser <username>' as root, where <username> is an username, like "
+"typing 'adduser <username>' as root, where <username> is a username, like "
 "'imurdock' or 'rms'."
 msgstr ""
 "Bemærk at du også kan oprette den senere (eller oprette flere konti) ved at "
@@ -281,6 +269,13 @@ msgstr "Vælg en adgangskode til den nye bruger:"
 #. Type: password
 #. Description
 #. :sl1:
+#: ../user-setup-udeb.templates:13001
+msgid "Make sure to select a strong password that cannot be guessed."
+msgstr ""
+
+#. Type: password
+#. Description
+#. :sl1:
 #: ../user-setup-udeb.templates:14001
 msgid ""
 "Please enter the same user password again to verify you have typed it "
@@ -321,32 +316,10 @@ msgstr ""
 "Du angav en tom adgangskode, hvilket ikke er tilladt. Vælg venligst en "
 "adgangskode, der ikke er tom."
 
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid "Enable shadow passwords?"
-msgstr "Aktivér skyggeadgangskoder?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid ""
-"Shadow passwords make your system more secure because nobody is able to view "
-"even encrypted passwords. The passwords are stored in a separate file that "
-"can only be read by special programs. The use of shadow passwords is "
-"strongly recommended, except in a few cases such as NIS environments."
-msgstr ""
-"Skyggeadgangskoder gør dit system mere sikkert, fordi de forhindrer at nogen "
-"ser de krypterede adgangskoder. Adgangskoderne gemmes i en separat fil, som "
-"kun kan læses af særlige programmer. Vi anbefaler kraftigt brugen af "
-"skyggeadgangskoder, undtagen i ganske få tilfælde såsom NIS-miljøer."
-
 #. Type: title
 #. Description
 #. :sl1:
-#: ../user-setup-udeb.templates:18001
+#: ../user-setup-udeb.templates:17001
 msgid "Set up users and passwords"
 msgstr "Sæt brugere og adgangskoder op"
 
@@ -354,6 +327,6 @@ msgstr "Sæt brugere og adgangskoder op"
 #. Description
 #. finish-install progress bar item
 #. :sl1:
-#: ../user-setup-udeb.templates:19001
+#: ../user-setup-udeb.templates:18001
 msgid "Setting users and passwords..."
 msgstr "Sætter brugere og adgangskoder op ..."

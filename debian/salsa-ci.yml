@@ -1,9 +1,8 @@
+---
 include:
-  - https://salsa.debian.org/salsa-ci-team/pipeline/raw/master/salsa-ci.yml
-  - https://salsa.debian.org/salsa-ci-team/pipeline/raw/master/pipeline-jobs.yml
+  - https://salsa.debian.org/installer-team/branch2repo/raw/main/trigger_b2r.yml
 
-# disable piuparts, as it's pointless for udebs
-piuparts:
-  only:
-    variables:
-      - $UNDEFINED_VAR_DISABLES_THIS
+variables:
+  # Architecture: all, so no need for these:
+  SALSA_CI_DISABLE_BUILD_PACKAGE_ANY: '1'
+  SALSA_CI_DISABLE_CROSSBUILD_ARM64: '1'

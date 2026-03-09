@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: user-setup@packages.debian.org\n"
-"POT-Creation-Date: 2012-02-16 22:49+0000\n"
+"POT-Creation-Date: 2024-04-06 20:02+0000\n"
 "PO-Revision-Date: 2019-08-28 18:09+0000\n"
 "Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: bo <translation-team-bo@lists.sourceforge.net>\n"
@@ -49,48 +49,37 @@ msgstr "རྩ་བའི་གསང་གྲངས："
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"You need to set a password for 'root', the system administrative account. A "
-"malicious or unqualified user with root access can have disastrous results, "
-"so you should take care to choose a root password that is not easy to guess. "
-"It should not be a word found in dictionaries, or a word that could be "
-"easily associated with you."
+"Some account needs to be available with administrative super-user "
+"privileges. The password for that account should be something that cannot be "
+"guessed."
 msgstr ""
-"'རྩ་བ' འམ་མ་ལག་གི་བདག་སྐྱོང་པའི་ཐོ་ཁོངས་ལ་གསང་གྲངས་ཞིག་ཡོད་དགོས་པ རྡུབ་རྩུབ་ཅན་དང་ཆོག་ཆན་མེད་"
-"པའི་སྤྱོད་མཁན་ལ་རྩ་བའི་དབང་ཆ་ཡོད་ན་མཇུག་འབྲས་ཚབས་ཆེན་བཟོ་ནུས། དེ་འདྲ་ཁྱོད་ཀྱིས་ཚོད་དཔག་བྱེད་བཀའ་"
-"བའི་རྩ་བའི་གསང་གྲངས་ཞིག་བཟོ་རྒྱུ་ལ་དོ་སྣང་བྱེད་དགོས་པ་དང་ཚིག་མཛོད་ནང་དུ་ཡོད་པ་དང་ཁྱོད་དང་འབྲེལ་ཡོད་"
-"ཀྱི་ཚིག་སྤྱོད་མི་ཉན"
-
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#: ../user-setup-udeb.templates:6001 ../user-setup-udeb.templates:13001
-msgid ""
-"A good password will contain a mixture of letters, numbers and punctuation "
-"and should be changed at regular intervals."
-msgstr ""
-"གསང་གྲངས་ལེགས་པོ་ཞིག་ལ་ཡི་གེ་དང་ཨང་ཀི ཚིག་ཤད་སོགས་སྲེལ་ནས་ཡོད་པ་དང་དུས་འཚམས་སུ་བརྗེ་དགོས"
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"The root user should not have an empty password. If you leave this empty, "
-"the root account will be disabled and the system's initial user account will "
-"be given the power to become root using the \"sudo\" command."
+"To allow direct password-based access via the 'root' account, you can set "
+"the password for that account here."
 msgstr ""
-"རྩ་བའི་སྤྱོད་མཁན་གྱི་གསང་གྲངས་སྟོང་བ་བཞག་མི་ཉན། འདི་སྟོང་བར་བསྐྱུར་ན་ཐོ་ཁོངས་ཞིག་གསར་འཛུགས་བྱེད་རྒྱུ་"
-"ཡིན་པ་དང་\"sudo\" བཀའ་བརྡ་སྤྱོད་ནས་རྩ་བ་སྤྱོད་ཐུབ་བཟོ་རྒྱུ་ཡིན"
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
-msgid "Note that you will not be able to see the password as you type it."
-msgstr "གསལ་འདེབས གསང་གྲངས་འབྲི་སྐབས་ཁྱོད་ཀྱིས་དེའི་ནང་དོན་མཐོང་མི་ཐུབ"
+msgid ""
+"Alternatively, you can lock the root account's password by leaving this "
+"setting empty, and instead use the system's initial user account (which will "
+"be set up in the next step) to gain administrative privileges. This will be "
+"enabled for you by adding that initial user to the 'sudo' group."
+msgstr ""
+
+#. Type: password
+#. Description
+#. :sl1:
+#: ../user-setup-udeb.templates:6001
+msgid "Note: what you type here will be hidden (unless you select to show it)."
+msgstr ""
 
 #. Type: password
 #. Description
@@ -136,9 +125,10 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../user-setup-udeb.templates:8001
+#, fuzzy
 msgid ""
 "Note that you may create it later (as well as any additional account) by "
-"typing 'adduser <username>' as root, where <username> is an username, like "
+"typing 'adduser <username>' as root, where <username> is a username, like "
 "'imurdock' or 'rms'."
 msgstr ""
 "གསལ་བརྡ། རྗེས་སུ་ཐོ་ཁོངས་ཞིག་གསར་བཟོ་སྐབས་(ཡང་ཐོ་ཁོངས་མང་པོ་བཟོས་ན) རྩ་བའི་གནས་སུ་'adduser "
@@ -240,6 +230,13 @@ msgstr "སྤྱོད་མཁན་གསར་པར་གསང་གྲང
 #. Type: password
 #. Description
 #. :sl1:
+#: ../user-setup-udeb.templates:13001
+msgid "Make sure to select a strong password that cannot be guessed."
+msgstr ""
+
+#. Type: password
+#. Description
+#. :sl1:
 #: ../user-setup-udeb.templates:14001
 msgid ""
 "Please enter the same user password again to verify you have typed it "
@@ -277,31 +274,10 @@ msgid ""
 msgstr ""
 "ཁྱོད་ཀྱིས་འཇུག་པའི་གསང་གྲངས་ནི་སྟོང་བ་རེད་འདུག་སྟོང་པ་མིན་པའི་གསང་གྲངས་ཞིག་ངེས་པར་དུ་འཇུག་དགོས"
 
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid "Enable shadow passwords?"
-msgstr "གྲིབ་གཟུགས་ཅན་གྱི་གསང་གྲངས་ནུས་ཡོད་བཟོ་དགོས་སམ"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid ""
-"Shadow passwords make your system more secure because nobody is able to view "
-"even encrypted passwords. The passwords are stored in a separate file that "
-"can only be read by special programs. The use of shadow passwords is "
-"strongly recommended, except in a few cases such as NIS environments."
-msgstr ""
-"གྲིབ་གཟུགས་ཅན་གྱི་གསང་གྲངས་དེ་སུས་ཀྱང་མཐོང་མི་ཐུབ། གསང་གྲངས་འདིའི་རིགས་ཡིག་ཆ་གཞན་ཞིག་གི་ནང་དུ་ཉར་"
-"བ་དང་དམིགས་བསལ་གྱི་བྱ་རིམ་གྱིས་ཁོ་ན་ཀློག་ཐུབ། NIS ཁོར་ཡུག་འདྲ་བ་ཁ་ཤས་ཕུད་པའི་གནས་ཡོངས་ལ་གྲིབ་"
-"གཟུགས་ཅན་གྱི་གསང་གྲངས་སྤྱོད་དགོས།"
-
 #. Type: title
 #. Description
 #. :sl1:
-#: ../user-setup-udeb.templates:18001
+#: ../user-setup-udeb.templates:17001
 msgid "Set up users and passwords"
 msgstr "སྤྱོད་མཁན་དང་གསང་གྲངས་སྒྲིག་འཛུགས་བྱེད་པ"
 
@@ -309,6 +285,6 @@ msgstr "སྤྱོད་མཁན་དང་གསང་གྲངས་སྒ
 #. Description
 #. finish-install progress bar item
 #. :sl1:
-#: ../user-setup-udeb.templates:19001
+#: ../user-setup-udeb.templates:18001
 msgid "Setting users and passwords..."
 msgstr "སྤྱོད་མཁན་དང་གསང་གྲངས་སྒྲིག་འཛུགས་བྱེད་བཞིན་པ་་་"

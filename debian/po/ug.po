@@ -3,7 +3,8 @@
 #
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
-#
+# Abdusalam <1810010207@s.upc.edu.cn>, 2020.
+# Abduqadir Abliz <sahran.ug@gmail.com>, 2017.
 #
 # Debian Installer master translation for Uyghur
 # Don't forget to properly fill-in the header of PO files
@@ -18,14 +19,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: user-setup@packages.debian.org\n"
-"POT-Creation-Date: 2012-02-16 22:49+0000\n"
-"PO-Revision-Date: 2012-02-27 17:17+0600\n"
-"Last-Translator: Sahran <sahran.ug@gmail.com>\n"
+"POT-Creation-Date: 2024-04-06 20:02+0000\n"
+"PO-Revision-Date: 2025-05-30 13:03+0000\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
-"Language: \n"
+"Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. Type: boolean
 #. Description
@@ -58,51 +60,47 @@ msgstr "ئالىي ئىشلەتكۈچى(Root) ئىمى:"
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"You need to set a password for 'root', the system administrative account. A "
-"malicious or unqualified user with root access can have disastrous results, "
-"so you should take care to choose a root password that is not easy to guess. "
-"It should not be a word found in dictionaries, or a word that could be "
-"easily associated with you."
+"Some account needs to be available with administrative super-user "
+"privileges. The password for that account should be something that cannot be "
+"guessed."
 msgstr ""
-"'root' ئىشلەتكۈچى (سىستېما باشقۇرغۇچى ھېساباتى)گە ئىم بەلگىلەش لازىم. "
-"زەھەرخەندە ياكى سالاھىيىتى يوق ئىشلەتكۈچى 'root' ھوقۇقىغا ئېرىشسە ئاپەت "
-"خاراكتېرلىك ئاقىۋەت كەلتۈرۈپ چىقىرىشى مۇمكىن، شۇڭا ئېھتىياتچانلىق بىلەن "
-"ئاسان تېپىۋالغىلى بولمايدىغان root ئىم تاللاڭ. ئىم لۇغەتتىن تاپقىلى "
-"بولىدىغان سۆز ياكى سىز بىلەن زىچ ئالاقىدار سۆز بولماسلىقى لازىم."
-
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#: ../user-setup-udeb.templates:6001 ../user-setup-udeb.templates:13001
-msgid ""
-"A good password will contain a mixture of letters, numbers and punctuation "
-"and should be changed at regular intervals."
-msgstr ""
-"بىخەتەر ئىم ئادەتتە ھەرپ، سان ۋە ھەرپ بەلگىلەرنىڭ ئارىلاشمىسىدىن تەشكىل "
-"تاپىدۇ، ھەمدە قەرەللىك ئالماشتۇرۇپ تۇرۇلىدۇ."
+"بەزى ھېسابات ئالاھىدە باشقۇرغۇچى ئىجازىتىگە ئېھتىياجلىق بولۇشى مۇمكىن. بۇ "
+"ھېساباتقا تەڭشەلگەن ئىم پەرەز قىلغىلى بولمايدىغان بولۇشى كېرەك."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"The root user should not have an empty password. If you leave this empty, "
-"the root account will be disabled and the system's initial user account will "
-"be given the power to become root using the \"sudo\" command."
+"To allow direct password-based access via the 'root' account, you can set "
+"the password for that account here."
 msgstr ""
-"root  نىڭ ئىمى قۇرۇق بولسا بولمايدۇ. ئەگەر ئىم بېكىتمىسىڭىز root ھېسابى "
-"ئىناۋەتسىز قىلىنىدۇ ھەم دەسلەپكى ئىشلەتكۈچىگە \"sudo\" بۇيرۇقى ئارقىلىق root "
-"نىڭ ھوقۇقلىرى بېرىلىدۇ."
+"«root» ھېساباتنى بىۋاسىتە زىيارەت قىلىش ئۈچۈن بۇ جايدا ئۇ ھېساباتقا ئىم "
+"تەڭشىيەلەيسىز."
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
-msgid "Note that you will not be able to see the password as you type it."
-msgstr "دىققەت،  سىز كىرگۈزگەن ئىم مەزمۇنىنى كۆرەلمەيسىز."
+msgid ""
+"Alternatively, you can lock the root account's password by leaving this "
+"setting empty, and instead use the system's initial user account (which will "
+"be set up in the next step) to gain administrative privileges. This will be "
+"enabled for you by adding that initial user to the 'sudo' group."
+msgstr ""
+"ياكى root ھېساباتىنى قۇلۇپلاپ بۇ تەڭشەكنى بوش قالدۇرسىڭىزمۇ بولىدۇ، سىستېما "
+"تۇنجى ئىشلەتكۈچى ھېساباتى (كېيىنكى باسقۇچتا تەڭشىلىدۇ) غا باشقۇرغۇچى "
+"ئىجازىتىنى بېرىدۇ. بۇ مەشغۇلات شۇ تۇنجى ئىشلەتكۈچىنى «sudo» گۇرۇپپىسىغا "
+"قوشۇشنى قوزغىتىدۇ."
+
+#. Type: password
+#. Description
+#. :sl1:
+#: ../user-setup-udeb.templates:6001
+msgid "Note: what you type here will be hidden (unless you select to show it)."
+msgstr ""
+"ئەسكەرتىش: بۇ جايدا كىرگۈزۈلگەن ئۇچۇر يوشۇرۇن (ئۇنى كۆرسىتىشنى تاللىمىغان "
+"بولسىڭىز) بولىدۇ."
 
 #. Type: password
 #. Description
@@ -112,7 +110,7 @@ msgstr "دىققەت،  سىز كىرگۈزگەن ئىم مەزمۇنىنى كۆ
 #. :sl1:
 #: ../user-setup-udeb.templates:7001 ../user-setup-udeb.templates:14001
 msgid "Re-enter password to verify:"
-msgstr "دەلىللەش ئۈچۈن ئىمنى  قايتا كىرگۈزۈڭ:"
+msgstr "دەلىللەش ئۈچۈن ئىمنى قايتا كىرگۈزۈڭ:"
 
 #. Type: password
 #. Description
@@ -153,13 +151,13 @@ msgstr ""
 #: ../user-setup-udeb.templates:8001
 msgid ""
 "Note that you may create it later (as well as any additional account) by "
-"typing 'adduser <username>' as root, where <username> is an username, like "
+"typing 'adduser <username>' as root, where <username> is a username, like "
 "'imurdock' or 'rms'."
 msgstr ""
 "دىققەت، سەل تۇرۇپ بۇ ھېسابات (باشقا ھەر قانداق ئىشلەتكۈچىنى ئۆز ئىچىگە "
-"ئالىدۇ) نى قۇرسىڭىز بولىدۇ. ئۇسۇلى root سالاھىيىتىدە 'adduser <username>' "
+"ئالىدۇ) نى قۇرسىڭىز بولىدۇ. ئۇسۇلى root سالاھىيىتىدە «‫adduser <username>‬» "
 "بۇيرۇقىنى ئىجرا قىلىش، بۇ يەردىكى <username> ئىشلەتكۈچىنىڭ ئاتى، مەسىلەن، "
-"'Bilik' ياكى 'UKIJ'"
+"«Bilik» ياكى «UKIJ»."
 
 #. Type: string
 #. Description
@@ -192,7 +190,7 @@ msgstr ""
 "بۇ ئىشلەتكۈچىنىڭ ھەقىقىي ئاتىنى كىرگۈزۈڭ. بۇ ئۇچۇر مەزكۇر ئىشلەتكۈچى "
 "يوللىغان ئېلخەتنىڭ كۆڭۈلدىكى مەنبەسى قىلىپ ئىشلىتىلىدۇ، شۇنىڭ بىلەن بىللە "
 "مەزكۇر ئىشلەتكۈچىنىڭ ھەقىقىي ئاتىنى كۆرسىتىشكە تېگىشلىك بولغان بارلىق "
-"پروگراممىلاردا كۆرسىتىلىدۇ.  ئۆزىڭىزنىڭ ئاتى ناھايىتى مۇۋاپىق تاللىشىڭىز "
+"پروگراممىلاردا كۆرسىتىلىدۇ. ئۆزىڭىزنىڭ ئاتى ناھايىتى مۇۋاپىق تاللىشىڭىز "
 "بولالايدۇ."
 
 #. Type: string
@@ -263,6 +261,13 @@ msgstr "يېڭى ئىشلەتكۈچىگە ئىم تاللاڭ:"
 #. Type: password
 #. Description
 #. :sl1:
+#: ../user-setup-udeb.templates:13001
+msgid "Make sure to select a strong password that cannot be guessed."
+msgstr "پەرەز قىلغىلى بولمايدىغان كۈچلۈك ئىم ئىشلىتىڭ."
+
+#. Type: password
+#. Description
+#. :sl1:
 #: ../user-setup-udeb.templates:14001
 msgid ""
 "Please enter the same user password again to verify you have typed it "
@@ -301,33 +306,10 @@ msgid ""
 "empty password."
 msgstr "ئىمنى بوش قالدۇرۇلغاچقا سىستېما قوبۇل قىلمىدى. باشقا ئىم تاللاڭ."
 
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid "Enable shadow passwords?"
-msgstr "يوشۇرۇن ئىم ئىقتىدارىنى(shadow password) قوزغىتامسىز؟"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid ""
-"Shadow passwords make your system more secure because nobody is able to view "
-"even encrypted passwords. The passwords are stored in a separate file that "
-"can only be read by special programs. The use of shadow passwords is "
-"strongly recommended, except in a few cases such as NIS environments."
-msgstr ""
-"يوشۇرۇن ئىم ئىشلىتىلگەندىن كېيىن ھېچقانداق كىشى شىفىرلانغان ئىم بولسىمۇ "
-"كۆرەلمەيدۇ، شۇڭا سىستېما تېخىمۇ بىخەتەر بولىدۇ. ئىم مۇستەقىل بىر ھۆججەتكە "
-"ساقلىنىدۇ ھەمدە بەلگىلەنگەن پروگراممىلا ئوقۇيالايدۇ. ناھايىتى ئاز ساندىكى "
-"ئەھۋالدىن سىرت، مەسىلەن NIS مۇھىتى، يوشۇرۇن ئىم ئىشلىتىشىڭىزنى كۈچلۈك "
-"تەۋسىيە قىلىمىز."
-
 #. Type: title
 #. Description
 #. :sl1:
-#: ../user-setup-udeb.templates:18001
+#: ../user-setup-udeb.templates:17001
 msgid "Set up users and passwords"
 msgstr "ئىشلەتكۈچى ۋە ئىم سەپلەش"
 
@@ -335,6 +317,6 @@ msgstr "ئىشلەتكۈچى ۋە ئىم سەپلەش"
 #. Description
 #. finish-install progress bar item
 #. :sl1:
-#: ../user-setup-udeb.templates:19001
+#: ../user-setup-udeb.templates:18001
 msgid "Setting users and passwords..."
 msgstr "ئىشلەتكۈچى ۋە ئىم سەپلەۋاتىدۇ…"

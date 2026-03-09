@@ -13,11 +13,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: km\n"
 "Report-Msgid-Bugs-To: user-setup@packages.debian.org\n"
-"POT-Creation-Date: 2012-02-16 22:49+0000\n"
-"PO-Revision-Date: 2012-01-18 15:40+0700\n"
-"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"POT-Creation-Date: 2024-04-06 20:02+0000\n"
+"PO-Revision-Date: 2019-08-28 18:10+0000\n"
+"Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
-"Language: \n"
+"Language: km\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,49 +53,37 @@ msgstr "ពាក្យសម្ងាត់ root ៖"
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"You need to set a password for 'root', the system administrative account. A "
-"malicious or unqualified user with root access can have disastrous results, "
-"so you should take care to choose a root password that is not easy to guess. "
-"It should not be a word found in dictionaries, or a word that could be "
-"easily associated with you."
+"Some account needs to be available with administrative super-user "
+"privileges. The password for that account should be something that cannot be "
+"guessed."
 msgstr ""
-"អ្នក​ត្រូវ​តែ​កំណត់​ពាក្យសម្ងាត់​មួយ​សម្រាប់ 'root' ដែល​ជា​គណនី​គ្រប់គ្រង​ប្រព័ន្ធ ។ អ្នក​ដែល​ប៉ុនប៉ង​ចង់​ព្យាបាទ​"
-"ប្រព័ន្ធ​របស់​អ្នក នឹង​មិន​អាច​ធ្វើ​អ្វី​បាន​ឡើយ បើ​មិន​ចូល​ជា root ដូច្នេះ​អ្នក​ត្រូវ​តែ​ជ្រើស​ពាក្យសម្ងាត់ root "
-"ដោយ​ប្រុងប្រយ័ត្ន​បំផុត គឺ​ជ្រើស​ពាក្យសម្ងាត់​ណា​ដែល​មិន​ងាយ​នឹង​ទស្សន៍ទាយ​បាន ។ អ្នក​មិន​គួរ​ជ្រើស​ពាក្យណា​ដែល​មាន​"
-"នៅ​ក្នុង​វចនានុក្រម ឬ ពាក្យ​ដែល​ជាប់​ទាក់ទង​នឹង​ខ្លួន​អ្នក​ឡើយ (ឧ. ឈ្មោះ​មិត្តភក្ដិ ឬ ថ្ងៃ​កំណើត...) ។"
-
-#. Type: password
-#. Description
-#. :sl1:
-#. Type: password
-#. Description
-#. :sl1:
-#: ../user-setup-udeb.templates:6001 ../user-setup-udeb.templates:13001
-msgid ""
-"A good password will contain a mixture of letters, numbers and punctuation "
-"and should be changed at regular intervals."
-msgstr ""
-"ពាក្យសម្ងាត់​ដែល​ល្អ​បំផុត​គឺ​ជា​ពាក្យសម្ងាត់​ដែល​មាន​ទាំង​អក្សរ ទាំង​លេខ និង សញ្ញា​វណ្ណយុត្តិ ហើយ​គួរ​តែ​ដាក់​នៅ​"
-"ឆ្លាស់​គ្នា​ចុះឡើងៗ ។"
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
 msgid ""
-"The root user should not have an empty password. If you leave this empty, "
-"the root account will be disabled and the system's initial user account will "
-"be given the power to become root using the \"sudo\" command."
+"To allow direct password-based access via the 'root' account, you can set "
+"the password for that account here."
 msgstr ""
-"អ្នកប្រើ​ជា root មិន​គួរ​មិនដាក់​​ពាក្យ​សម្ងាត់​ទេ ។ ប្រសិនបើ​អ្នក​ទុក​ឲ្យ​វា​ទំនេរ គណនី root នឹង​ត្រូវបានបិទ "
-"ហើយ​គណនី​អ្នកប្រើ​ដំបូង​របស់​ប្រព័ន្ធ​នឹង​ត្រូវបានផ្ដល់​សិទ្ធិ​ក្លាយ​អ្នក​ root ដោយ​ប្រើ​ពាក្យ​បញ្ជា \"sudo\" ។"
 
 #. Type: password
 #. Description
 #. :sl1:
 #: ../user-setup-udeb.templates:6001
-msgid "Note that you will not be able to see the password as you type it."
-msgstr "សូម​ចំណាំ​ថា អ្នក​នឹង​មិន​អាច​មើលឃើញ​ពាក្យ​សម្ងាត់ ពេល​ដែល​អ្នក​វាយ​វា​ឡើយ ។"
+msgid ""
+"Alternatively, you can lock the root account's password by leaving this "
+"setting empty, and instead use the system's initial user account (which will "
+"be set up in the next step) to gain administrative privileges. This will be "
+"enabled for you by adding that initial user to the 'sudo' group."
+msgstr ""
+
+#. Type: password
+#. Description
+#. :sl1:
+#: ../user-setup-udeb.templates:6001
+msgid "Note: what you type here will be hidden (unless you select to show it)."
+msgstr ""
 
 #. Type: password
 #. Description
@@ -141,9 +129,10 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../user-setup-udeb.templates:8001
+#, fuzzy
 msgid ""
 "Note that you may create it later (as well as any additional account) by "
-"typing 'adduser <username>' as root, where <username> is an username, like "
+"typing 'adduser <username>' as root, where <username> is a username, like "
 "'imurdock' or 'rms'."
 msgstr ""
 "សូម​ចំណាំ​ថា​ អ្នក​អាច​បង្កើត​វា​ពេល​ក្រោយ​ក៏​បាន​ដែរ (បន្ថែម​គណនី​ផ្សេង​ទៀត​ក៏​បាន​ដែរ) ដោយ​ចូល​ជា root ហើយ​"
@@ -247,6 +236,13 @@ msgstr "ជ្រើស​ពាក្យ​សម្ងាត់​សម្រ
 #. Type: password
 #. Description
 #. :sl1:
+#: ../user-setup-udeb.templates:13001
+msgid "Make sure to select a strong password that cannot be guessed."
+msgstr ""
+
+#. Type: password
+#. Description
+#. :sl1:
 #: ../user-setup-udeb.templates:14001
 msgid ""
 "Please enter the same user password again to verify you have typed it "
@@ -285,32 +281,10 @@ msgstr ""
 "អ្នក​បាន​បញ្ចូល​ពាក្យសម្ងាត់​ទទេ​មួយ ដែល​មិន​ត្រូវ​បាន​អនុញ្ញាត​ឡើយ ។ សូម​ជ្រើស​ពាក្យសម្ងាត់​មួយ​ទៀត ដែល​មិន​មែន​"
 "ទទេ ។"
 
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid "Enable shadow passwords?"
-msgstr "អនុញ្ញាត​ពាក្យសម្ងាត់​ស្រមោល ?"
-
-#. Type: boolean
-#. Description
-#. :sl2:
-#: ../user-setup-udeb.templates:17001
-msgid ""
-"Shadow passwords make your system more secure because nobody is able to view "
-"even encrypted passwords. The passwords are stored in a separate file that "
-"can only be read by special programs. The use of shadow passwords is "
-"strongly recommended, except in a few cases such as NIS environments."
-msgstr ""
-"ពាក្យសម្ងាត់​ស្រមោល​អាច​ធ្វើ​ឲ្យ​ប្រព័ន្ធ​របស់​អ្នក​កាន់​តែ​មាន​សុវត្ថិភាព ព្រោះ​មិន​មាន​នរណា​​អាច​មើល​ពាក្យ​សម្ងាត់​"
-"បាន​ឡើយ ។ ពាក្យ​សម្ងាត់​នឹង​ត្រូវ​បាន​រក្សាទុក​ក្នុង​ឯកសារ​ដាច់​ដោយ​ឡែក​មួយ ដែល​មាន​តែ​កម្មវិធី​ពិសេស​ខ្លះ​"
-"ប៉ុណ្ណោះ អាច​អាន​បាន ។ អ្នក​គួរ​តែ​ប្រើ​ពាក្យសម្ងាត់​ស្រមោល ដោយ​លើកលែង​តែ​ករណី​មួយ​ចំនួន ដូចជា​នៅ​ក្នុង​"
-"បរិស្ថាន NIS ជាដើម ។"
-
 #. Type: title
 #. Description
 #. :sl1:
-#: ../user-setup-udeb.templates:18001
+#: ../user-setup-udeb.templates:17001
 msgid "Set up users and passwords"
 msgstr "រៀប​ចំ​អ្នក​ប្រើ និង ពាក្យ​សម្ងាត់​"
 
@@ -318,6 +292,6 @@ msgstr "រៀប​ចំ​អ្នក​ប្រើ និង ពាក្�
 #. Description
 #. finish-install progress bar item
 #. :sl1:
-#: ../user-setup-udeb.templates:19001
+#: ../user-setup-udeb.templates:18001
 msgid "Setting users and passwords..."
 msgstr "កំពុង​កំណត់​អ្នក​ប្រើ និង ពាក្យ​សម្ងាត់​..."
